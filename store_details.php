@@ -20,6 +20,12 @@ function db_connect(){
 require_once('simple_html_dom.php');
 $conn = db_connect();
 $sql = "SELECT * FROM `resort_value` WHERE 1";
+
+// tranculate table occupancy before insertinng new rows
+
+// $sql = "truncate occupancy";
+
+//  mysqli_query($conn,$sql)
 if($result = mysqli_query($conn,$sql))
 {
 	while($row = mysqli_fetch_array($result))
