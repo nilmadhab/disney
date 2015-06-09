@@ -24,7 +24,7 @@ if($result = mysqli_query($conn,$sql))
 {
 	while($row = mysqli_fetch_array($result))
 	{
-		for($cm = 3 ; $cm < 7 ; $cm++ )
+		for($cm = 2	 ; $cm < 7 ; $cm++ )
 		{
 			echo "<br>resort type entry -> ";
 			//echo explode('entityType=resort',$row['value'])[0]."---- >".$row['short_url']."<br>";
