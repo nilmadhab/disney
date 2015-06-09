@@ -24,20 +24,20 @@ if($result = mysqli_query($conn,$sql))
 {
 	while($row = mysqli_fetch_array($result))
 	{
-		echo explode('entityType=resort',$row['value'])[0]."---- >".$row['short_url']."<br>";
+		echo "resort type entry<br>";
+		//echo explode('entityType=resort',$row['value'])[0]."---- >".$row['short_url']."<br>";
 		$checkInDate = "2015-06-14";
 		$checkOutDate = "2015-06-20";
 		$numberOfAdults = "2";
-		$numberOfChildren = "1";
+		$numberOfChildren = "2";
 		$accessible = "1";
 		$resort = explode('entityType=resort',$row['value'])[0];
 		$coockie = 'roomForm_jar={"checkInDate":"'.$checkInDate.'","checkOutDate":"'.$checkOutDate.'","numberOfAdults":"'.$numberOfAdults.'","numberOfChildren":"'.$numberOfChildren.'","accessible":"'.$accessible.'","resort":"'.$resort.';entityType=resort","roomTypeId":false,"components":"","cartId":"","cartItemId":""}; 
 		expires=Wed, 08-Jun-2016 13:00:42 GMT; path=/';
-		//Wed, 08-Jun-2016 13:00:42 GMT
 
-		echo "<br>".urldecode($coockie);
+		//echo "<br>".urldecode($coockie);
 		$url = "https://disneyworld.disney.go.com/resorts/".$row['short_url']."/rates-rooms/";
-		echo "<br>".$url ;
+		//echo "<br>".$url ;
 		$ch = curl_init($url);
 		curl_setopt($ch, CURLOPT_VERBOSE, 1);
 		curl_setopt($ch, CURLOPT_COOKIE, urldecode($coockie));
@@ -57,14 +57,16 @@ if($result = mysqli_query($conn,$sql))
 		$links = $page->find(".roomType");
 
 
-		foreach ($links as $value) {
-			echo $value->find("h3",0)."<br />";
+		foreach ($links as $value) 
+		{
+			echo "entry made<br>";
+			//echo $value->find("h3",0)."<br />";
 
-			echo $value->find(".occupancy",0)."<br />";
+			//echo $value->find(".occupancy",0)."<br />";
 
-			echo $value->find(".integer",0)."<br />";
+			//echo $value->find(".integer",0)."<br />";
 
-			echo $value->find(".roomDetails",0)."<br />";
+			//echo $value->find(".roomDetails",0)."<br />";
 
 			$resort_name= $row['short_url'];
 			$max_adult = $value->find(".occupancy",0)->plaintext;
@@ -72,7 +74,7 @@ if($result = mysqli_query($conn,$sql))
 			$details = $value->find(".roomDetails",0)->plaintext;
 			$room_title = $value->find("h3",0)->plaintext;
 
-			$sql1 = "INSERT INTO `occupancy_child_1`(
+			$sql1 = "INSERT INTO `occupancy_child_2`(
 				 `resort_id`, `resort_name`, `max_adult`, `price`, `details`, `room_title`)
 			 VALUES ('$resort','$resort_name','$max_adult','$price','$details','$room_title')";
 
@@ -86,13 +88,6 @@ if($result = mysqli_query($conn,$sql))
 			}
 			
 		}
-
-
-
-
-		///
-
-		//break;
 	}
 }
 
