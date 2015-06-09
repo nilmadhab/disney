@@ -59,7 +59,7 @@ if($result = mysqli_query($conn,$sql))
 
 		foreach ($links as $value) 
 		{
-			echo "entry made<br>";
+			echo " entry made ";
 			//echo $value->find("h3",0)."<br />";
 
 			//echo $value->find(".occupancy",0)."<br />";
@@ -82,7 +82,7 @@ if($result = mysqli_query($conn,$sql))
 
 
 			if( mysqli_query($conn,$sql1) ) {
-				echo "recoreds inserted sucessfully";
+				//echo "recoreds inserted sucessfully";
 			}else{
 				echo "insertion failed".mysql_error($conn);
 			}
