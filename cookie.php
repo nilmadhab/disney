@@ -53,5 +53,7 @@ if($result = mysqli_query($conn,$sql))
 		print_r($page);
 	}
 }
+
+// nil here
 ?>
 
