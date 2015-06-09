@@ -69,10 +69,10 @@ if($result = mysqli_query($conn,$sql))
 			//echo $value->find(".roomDetails",0)."<br />";
 
 			$resort_name= $row['short_url'];
-			$max_adult = $value->find(".occupancy",0)->plaintext;
-			$price = $value->find(".integer",0)->plaintext;
-			$details = $value->find(".roomDetails",0)->plaintext;
-			$room_title = $value->find("h3",0)->plaintext;
+			$max_adult = mysqli_real_escape_string($conn,$value->find(".occupancy",0)->plaintext);
+			$price = mysqli_real_escape_string($conn,$value->find(".integer",0)->plaintext);
+			$details = mysqli_real_escape_string($conn,$value->find(".roomDetails",0)->plaintext);
+			$room_title = mysqli_real_escape_string($conn,$value->find("h3",0)->plaintext);
 
 			$sql1 = "INSERT INTO `occupancy_child_0`(
 				 `resort_id`, `resort_name`, `max_adult`, `price`, `details`, `room_title`)
