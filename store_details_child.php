@@ -29,7 +29,7 @@ if($result = mysqli_query($conn,$sql))
 		$checkInDate = "2015-06-14";
 		$checkOutDate = "2015-06-20";
 		$numberOfAdults = "2";
-		$numberOfChildren = "1";
+		$numberOfChildren = "2";
 		$accessible = "1";
 		$resort = explode('entityType=resort',$row['value'])[0];
 		$coockie = 'roomForm_jar={"checkInDate":"'.$checkInDate.'","checkOutDate":"'.$checkOutDate.'","numberOfAdults":"'.$numberOfAdults.'","numberOfChildren":"'.$numberOfChildren.'","accessible":"'.$accessible.'","resort":"'.$resort.';entityType=resort","roomTypeId":false,"components":"","cartId":"","cartItemId":""}; 
@@ -74,7 +74,7 @@ if($result = mysqli_query($conn,$sql))
 			$details = mysqli_real_escape_string($conn,$value->find(".roomDetails",0)->plaintext);
 			$room_title = mysqli_real_escape_string($conn,$value->find("h3",0)->plaintext);
 
-			$sql1 = "INSERT INTO `occupancy_child_1`(
+			$sql1 = "INSERT INTO `occupancy_child_2`(
 				 `resort_id`, `resort_name`, `max_adult`, `price`, `details`, `room_title`)
 			 VALUES ('$resort','$resort_name','$max_adult','$price','$details','$room_title')";
 
