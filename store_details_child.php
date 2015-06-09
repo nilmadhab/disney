@@ -84,7 +84,7 @@ if($result = mysqli_query($conn,$sql))
 			if( mysqli_query($conn,$sql1) ) {
 				//echo "recoreds inserted sucessfully";
 			}else{
-				echo "insertion failed".mysql_error($conn);
+				echo "insertion failed".mysqli_error($conn);
 			}
 			
 		}
@@ -94,3 +94,4 @@ if($result = mysqli_query($conn,$sql))
 // nil here
 ?>
 
+	
