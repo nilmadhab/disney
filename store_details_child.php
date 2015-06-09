@@ -24,7 +24,7 @@ if($result = mysqli_query($conn,$sql))
 {
 	while($row = mysqli_fetch_array($result))
 	{
-		echo "resort type entry<br>";
+		echo "<br>resort type entry -> ";
 		//echo explode('entityType=resort',$row['value'])[0]."---- >".$row['short_url']."<br>";
 		$checkInDate = "2015-06-14";
 		$checkOutDate = "2015-06-20";
@@ -84,7 +84,8 @@ if($result = mysqli_query($conn,$sql))
 			if( mysqli_query($conn,$sql1) ) {
 				//echo "recoreds inserted sucessfully";
 			}else{
-				echo "insertion failed".mysqli_error($conn);
+				echo "<br>insertion failed".mysqli_error($conn)."<br>";
+				echo $sql1 ;
 			}
 			
 		}
