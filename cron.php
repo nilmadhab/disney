@@ -1,5 +1,9 @@
+<?php
+// To set cron >crontab -e or >sudo crontab -e
+//To view the log sudo grep CRON /var/log/syslog
+?>
 <?php 
-	require_once('/includes/db_conn.php');
+	require_once('includes/db_conn.php');
 	$conn = db_connect();
 	$id = rand(1,100);
 	$username = "fvfd";
@@ -13,6 +17,5 @@
 	} else {
     	echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 	}
-
 ?>
 
