@@ -31,7 +31,7 @@ if($result = mysqli_query($conn,$sql))
 		$numberOfChildren = "0";
 		$accessible = "1";
 		$resort = explode('entityType=resort',$row['value'])[0];
-		$coockie = 'roomForm_jar={"checkInDate":"'.$checkInDate.'","checkOutDate":"'.$checkOutDate.'","numberOfAdults":"'.$numberOfAdults.'","numberOfChildren":"'.$numberOfChildren.'","accessible":"'.$accessible.'","resort":"'.$resort.';entityType=resort","roomTypeId":false,"components":"","cartId":"","cartItemId":""}; expires=Wed, 09-Jun-2016 00:19:37 GMT; path=/';
+		$coockie = 'roomForm_jar={"checkInDate":"'.$checkInDate.'","checkOutDate":"'.$checkOutDate.'","numberOfAdults":"'.$numberOfAdults.'","numberOfChildren":"'.$numberOfChildren.'","accessible":"'.$accessible.'","resort":"'.$resort.';entityType=resort","roomTypeId":false,"components":"","cartId":"","cartItemId":""}; expires=Wed, 11-Jun-2016 00:19:37 GMT; path=/';
 
 
 		echo "<br>".urldecode($coockie);
