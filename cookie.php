@@ -17,7 +17,7 @@ function db_connect(){
 ?>
 
 <?php
-require_once('simple_html_dom.php');
+require_once('includes/simple_html_dom.php');
 $conn = db_connect();
 $sql = "SELECT * FROM `resort_value` WHERE 1";
 if($result = mysqli_query($conn,$sql))
