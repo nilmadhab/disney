@@ -22,9 +22,9 @@ $conn = db_connect();
 $sql = "SELECT * FROM `resort_value` WHERE 1";
 if($result = mysqli_query($conn,$sql))
 {
-	while($row = mysqli_fetch_array($result))
+	for($cm = 1	 ; $cm < 7 ; $cm++ )
 	{
-		for($cm = 1	 ; $cm < 7 ; $cm++ )
+		while($row = mysqli_fetch_array($result))
 		{
 			echo "<br>resort type entry -> ";
 			//echo explode('entityType=resort',$row['value'])[0]."---- >".$row['short_url']."<br>";
