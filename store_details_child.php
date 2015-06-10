@@ -53,7 +53,7 @@ if($result = mysqli_query($conn,$sql))
 
 			$page = str_get_html($page);
 
-			$page = $page->getElementById("pageContainer")->getElementById("cardList");
+			$page = $page->getElementById("pageContainer");//->getElementById("cardList");
 
 
 
