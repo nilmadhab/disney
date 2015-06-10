@@ -43,7 +43,7 @@ if($result = mysqli_query($conn,$sql))
 			echo "<br>".$url ;
 			$ch = curl_init($url);
 			curl_setopt($ch, CURLOPT_VERBOSE, 1);
-			curl_setopt($ch, CURLOPT_COOKIE, urldecode($coockie));
+			curl_setopt($ch, CURLOPT_COOKIE, $coockie);
 			curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 			$page = curl_exec($ch);
 			curl_close($ch);
