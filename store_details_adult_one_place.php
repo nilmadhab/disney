@@ -39,7 +39,7 @@ $sql = "SELECT * FROM `resort_value` WHERE 1";
 //  mysqli_query($conn,$sql)
 
 
-$current_adult = 3;
+$current_adult = 1;
 
 $count = 0;
 
