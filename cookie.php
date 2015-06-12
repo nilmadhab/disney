@@ -1,23 +1,7 @@
 <?php
-
-ini_set('display_errors', true);
-error_reporting(E_ALL ^ E_NOTICE);
-function db_connect(){
-
-	$con = mysqli_connect("localhost","root","25011994","disney");
-	
-	// Check connection
-	if (mysqli_connect_errno())
-  		echo "Failed to connect to MySQL: " . mysqli_connect_error();
-  	else
-		echo "Connection Successful<br>";
-	
-	return $con;
-}
-?>
-
-<?php
 require_once('includes/simple_html_dom.php');
+require_once('includes/db_conn.php');
+
 $conn = db_connect();
 $sql = "SELECT * FROM `resort_value` WHERE 1";
 if($result = mysqli_query($conn,$sql))
@@ -44,16 +28,9 @@ if($result = mysqli_query($conn,$sql))
 		$page = curl_exec($ch);
 		curl_close($ch);
 
-		//$dom = str_get_html($page);
-		//$links = $dom->find('h3');
-		// foreach ($links as $key ) 
-		// {
-		// 	echo "<br>".$key->plaintext." ---> ".$key->getAttribute('href');
-		// }
 		print_r($page);
 	}
 }
 
-// nil here
 ?>
 
