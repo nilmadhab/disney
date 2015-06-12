@@ -51,7 +51,7 @@ if(isset($_POST)){
     $resort = explode(";", $resort)[0];
 
     $table = '`occupancy_child_'.$numberOfChildren.'`';
-    $sql = "SELECT * FROM $table WHERE `resort_id` = '$resort' and `accessibility` = '$accessible' and `numberOfAdults` = '$numberOfAdults'";
+    $sql = "SELECT * FROM $table WHERE `resort_id` = '$resort' and `accessibility` = '$accessible' and `noofAdults` = '$numberOfAdults'";
 
     echo "Query: ".$sql."  ||  ";
 }
