@@ -1,21 +1,9 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title></title>
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
-
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-</head>
-
 <body>
   
 
-<form action=""
+<form action="test_child_action.php"
 class="quickQuote inline uiPlus hotels" data-plugins=
 "[[&quot;homepageQuickQuoteInlineNge&quot;,{&quot;classQuickQuoteContainer&quot;:&quot;.qqContainerHotels&quot;,&quot;idQuickQuoteWrapper&quot;:&quot;&quot;,&quot;idQuickQuoteBottomLeft&quot;:&quot;.qqLeftCorner&quot;,&quot;idQuickQuoteBottomRight&quot;:&quot;.qqRightCorner&quot;,&quot;idQuickQuoteBottomMiddle&quot;:&quot;fieldset.childAges:before&quot;,&quot;idKidsDropdownBackground&quot;:&quot;fieldset.childAges&quot;,&quot;supportsInlineHomepageTickets&quot;:false}],[&quot;pepAddRoomForm&quot;,{&quot;fields&quot;:{&quot;checkInDate&quot;:{&quot;min&quot;:&quot;2015-06-07T00:00:00-04:00&quot;,&quot;max&quot;:&quot;2015-12-31T23:59:59-05:00&quot;},&quot;checkOutDate&quot;:{&quot;min&quot;:&quot;2015-06-08T00:00:00-04:00&quot;,&quot;max&quot;:&quot;2016-01-30T23:59:59-05:00&quot;}},&quot;constraints&quot;:{&quot;minLengthOfStay&quot;:&quot;1&quot;,&quot;maxLengthOfStay&quot;:&quot;30&quot;,&quot;defaultLengthOfStay&quot;:&quot;6&quot;,&quot;maxPartySize&quot;:&quot;12&quot;,&quot;maxNumberOfAdults&quot;:&quot;9&quot;,&quot;maxNumberOfChildren&quot;:&quot;6&quot;,&quot;resort&quot;:false},&quot;errorsSummaryBoxHtml&quot;:&quot;&lt;div class=\&quot;dynamic errorsSummaryBox\&quot; tabindex=\&quot;-1\&quot; data-plugins=\&quot;[[&amp;quot;pepPageLevelError&amp;quot;,{&amp;quot;pageErrorClass&amp;quot;:&amp;quot;.dynamic&amp;quot;}]]\&quot;&gt;\n &lt;div class=\&quot;message\&quot;&gt;&lt;span class=\&quot;icon-messaging-s\&quot;&gt;&lt;\/span&gt;&lt;div class=\&quot;errorIntro\&quot;&gt;Sorry, there are one or more errors below.&lt;\/div&gt;&lt;ul class=\&quot;errorList\&quot;&gt;&lt;li class=\&quot;childAges\&quot;&gt;&lt;span class=\&quot;accessibleAltText\&quot;&gt;Error: &lt;\/span&gt;Enter each child's age at the time of travel.&lt;\/li&gt;&lt;li class=\&quot;emptyCheckInDate\&quot;&gt;&lt;span class=\&quot;accessibleAltText\&quot;&gt;Error: &lt;\/span&gt;Please provide the check in date for your trip.&lt;\/li&gt;&lt;li class=\&quot;emptyCheckOutDate\&quot;&gt;&lt;span class=\&quot;accessibleAltText\&quot;&gt;Error: &lt;\/span&gt;Please provide the check out date for your trip.&lt;\/li&gt;&lt;li class=\&quot;emptyNumberOfAdults\&quot;&gt;&lt;span class=\&quot;accessibleAltText\&quot;&gt;Error: &lt;\/span&gt;Please provide the number of adults in your party.&lt;\/li&gt;&lt;li class=\&quot;emptyNumberOfChildren\&quot;&gt;&lt;span class=\&quot;accessibleAltText\&quot;&gt;Error: &lt;\/span&gt;Please provide the number of kids in your party.&lt;\/li&gt;&lt;li class=\&quot;invalidCheckInDate\&quot;&gt;&lt;span class=\&quot;accessibleAltText\&quot;&gt;Error: &lt;\/span&gt;We cannot process the check-in date you provided.&lt;\/li&gt;&lt;li class=\&quot;invalidCheckOutDate\&quot;&gt;&lt;span class=\&quot;accessibleAltText\&quot;&gt;Error: &lt;\/span&gt;We cannot process the check-out date you provided.&lt;\/li&gt;&lt;li class=\&quot;invalidResort\&quot;&gt;&lt;span class=\&quot;accessibleAltText\&quot;&gt;Error: &lt;\/span&gt;Select a Resort hotel.&lt;\/li&gt;&lt;li class=\&quot;maxLengthOfStay\&quot;&gt;&lt;span class=\&quot;accessibleAltText\&quot;&gt;Error: &lt;\/span&gt;Stay booked online cannot exceed 30 nights. Please &lt;a href=\&quot;\/help\/phone\/\&quot;&gt;call us&lt;\/a&gt; to book a stay longer than 30 days.&lt;\/li&gt;&lt;li class=\&quot;maxNumberOfAdults\&quot;&gt;&lt;span class=\&quot;accessibleAltText\&quot;&gt;Error: &lt;\/span&gt;You have exceeded our maximum room capacity of 9 adults. If your party is larger than 9 adults, please &lt;a href=\&quot;\/help\/phone\/\&quot;&gt;call us&lt;\/a&gt; or book multiple rooms online.&lt;\/li&gt;&lt;li class=\&quot;maxNumberOfChildren\&quot;&gt;&lt;span class=\&quot;accessibleAltText\&quot;&gt;Error: &lt;\/span&gt;You have exceeded our maximum room capacity of 6 children. If your party is larger than 6 children, please &lt;a href=\&quot;\/help\/phone\/\&quot;&gt;call us&lt;\/a&gt; or book multiple rooms online.&lt;\/li&gt;&lt;li class=\&quot;maxPartySize\&quot;&gt;&lt;span class=\&quot;accessibleAltText\&quot;&gt;Error: &lt;\/span&gt;You have exceeded our maximum room capacity of 12 people. If your party is larger than 12 people, please &lt;a href=\&quot;\/help\/phone\/\&quot;&gt;call us&lt;\/a&gt; or book multiple rooms online.&lt;\/li&gt;&lt;li class=\&quot;minCheckInDate\&quot;&gt;&lt;span class=\&quot;accessibleAltText\&quot;&gt;Error: &lt;\/span&gt;The minimum bookable date is today plus 1 day.&lt;\/li&gt;&lt;li class=\&quot;minLengthOfStay\&quot;&gt;&lt;span class=\&quot;accessibleAltText\&quot;&gt;Error: &lt;\/span&gt;Select a later check-out date. You must stay at least one night.&lt;\/li&gt;&lt;li class=\&quot;minNumberOfAdults\&quot;&gt;&lt;span class=\&quot;accessibleAltText\&quot;&gt;Error: &lt;\/span&gt;Your party must contain at least 1 adult.&lt;\/li&gt;&lt;li class=\&quot;noProductAvailable\&quot;&gt;&lt;span class=\&quot;accessibleAltText\&quot;&gt;Error: &lt;\/span&gt;No information on resorts is available for the dates specified.&lt;\/li&gt;&lt;\/ul&gt;&lt;\/div&gt;\n&lt;\/div&gt;&quot;,&quot;waitForAnalyticsTracking&quot;:true,&quot;validateOnInit&quot;:true,&quot;dateFormatOptions&quot;:{&quot;momentDateFormat&quot;:&quot;MM\/DD\/YYYY&quot;,&quot;dateValidationRegEx&quot;:&quot;(0[1-9]|1[012])[\\- \\\/.](0[1-9]|[12][0-9]|3[01])[\\- \\\/.](19|20)[0-9][0-9]&quot;},&quot;childrenBirthdays&quot;:false,&quot;noChildAges&quot;:null,&quot;showPleaseWaitOnSubmit&quot;:true,&quot;selectors&quot;:{&quot;childrenContainer&quot;:&quot;fieldset.childAges&quot;,&quot;childrenLegend&quot;:&quot;fieldset.childAges label&quot;,&quot;childrenDropdownContainer&quot;:&quot;fieldset.childAges .formInputElement&quot;,&quot;childrenDropdown&quot;:&quot;fieldset.childAges .formInputElement select&quot;}}],[&quot;pepPleaseWait&quot;,{&quot;autohook&quot;:false}]]"
 method="post">
@@ -29,8 +17,7 @@ method="post">
         <label class="optional" for=
         "numberOfChildren_5573d56a1aba6"><span class=
         "labelValue">Children</span><span class=
-        "accessibleAltText">&nbsp; - Opens
-        menu</span></label> <span class=
+        "accessibleAltText">&nbsp; </span></label> <span class=
         "selectBox short standardFormElement"
         data-a11ytext=" - Opens menu"
         data-appendliststyleenhancements="[]"
@@ -100,14 +87,11 @@ method="post">
             "selectBox-nojs"><select class=
             "inputElement" id="kid1_5573d56a1af57"
             name="kid1" tabindex="0">
-                <option label="-" selected="selected"
-                value="-">
-                    -
-                </option>
-
-                <option label="17" value="17">
+                <option label="17" selected="selected"
+                value="17">
                     17
                 </option>
+
 
                 <option label="16" value="16">
                     16
@@ -196,14 +180,12 @@ method="post">
             "selectBox-nojs"><select class=
             "inputElement" id="kid2_5573d56a1b336"
             name="kid2" tabindex="0">
-                <option label="-" selected="selected"
-                value="-">
-                    -
-                </option>
-
-                <option label="17" value="17">
+                <option label="17" selected="selected"
+                value="17">
                     17
                 </option>
+
+                
 
                 <option label="16" value="16">
                     16
@@ -292,12 +274,8 @@ method="post">
             "selectBox-nojs"><select class=
             "inputElement" id="kid3_5573d56a1b6ea"
             name="kid3" tabindex="0">
-                <option label="-" selected="selected"
-                value="-">
-                    -
-                </option>
-
-                <option label="17" value="17">
+                <option label="17" selected="selected"
+                value="17">
                     17
                 </option>
 
@@ -388,12 +366,8 @@ method="post">
             "selectBox-nojs"><select class=
             "inputElement" id="kid4_5573d56a1baab"
             name="kid4" tabindex="0">
-                <option label="-" selected="selected"
-                value="-">
-                    -
-                </option>
-
-                <option label="17" value="17">
+                <option label="17" selected="selected"
+                value="17">
                     17
                 </option>
 
@@ -484,12 +458,8 @@ method="post">
             "selectBox-nojs"><select class=
             "inputElement" id="kid5_5573d56a1be6e"
             name="kid5" tabindex="0">
-                <option label="-" selected="selected"
-                value="-">
-                    -
-                </option>
-
-                <option label="17" value="17">
+                <option label="17" selected="selected"
+                value="17">
                     17
                 </option>
 
@@ -580,12 +550,8 @@ method="post">
             "selectBox-nojs"><select class=
             "inputElement" id="kid6_5573d56a1c244"
             name="kid6" tabindex="0">
-                <option label="-" selected="selected"
-                value="-">
-                    -
-                </option>
-
-                <option label="17" value="17">
+                <option label="17" selected="selected"
+                value="17">
                     17
                 </option>
 
@@ -663,8 +629,7 @@ method="post">
         <label class="optional" for=
         "resort_5573d56a1c609"><span class=
         "labelValue">Resort Hotel</span><span class=
-        "accessibleAltText">&nbsp; - Opens
-        menu</span></label> <span class=
+        "accessibleAltText">&nbsp; </span></label> <span class=
         "selectBox long standardFormElement"
         data-a11ytext=" - Opens menu"
         data-appendliststyleenhancements=
@@ -680,15 +645,9 @@ method="post">
         id="resort-wrapper"><span class=
         "selectBox-nojs"><select class="inputElement"
         id="resort_5573d56a1c609" name="resort"
-        tabindex="0">
-            <option label="All Resort Hotels" value="">
-                All Resort Hotels
-            </option>
-
-            <option label=
-            "Deluxe Villa - From $313/Night" value=
-            "deluxe-villa">
-                Deluxe Villa - From $313/Night
+        tabindex="0" required>
+            <option label="Choose the resort" value="">
+                Choose the resort
             </option>
 
             <option label=
@@ -755,11 +714,6 @@ method="post">
                 Resort &amp; Spa
             </option>
 
-            <option label=
-            "Deluxe Resorts - From $279/Night" value=
-            "deluxe">
-                Deluxe Resorts - From $279/Night
-            </option>
 
             <option label=
             "Disney's Animal Kingdom Lodge" value=
@@ -807,12 +761,6 @@ method="post">
             </option>
 
             <option label=
-            "Moderate Resorts - From $162/Night" value=
-            "moderate">
-                Moderate Resorts - From $162/Night
-            </option>
-
-            <option label=
             "The Cabins at Disney's Fort Wilderness Resort"
             value="80010408;entityType=resort">
                 The Cabins at Disney's Fort Wilderness
@@ -845,11 +793,6 @@ method="post">
                 Riverside
             </option>
 
-            <option label=
-            "Value Resorts - From $85/Night" value=
-            "value">
-                Value Resorts - From $85/Night
-            </option>
 
             <option label=
             "Disney's All-Star Movies Resort" value=
@@ -880,10 +823,6 @@ method="post">
                 Disney's Pop Century Resort
             </option>
 
-            <option label="Campground From $48/Night"
-            value="campground">
-                Campground From $48/Night
-            </option>
 
             <option label=
             "The Campsites at Disney's Fort Wilderness Resort"
@@ -892,12 +831,6 @@ method="post">
                 Wilderness Resort
             </option>
 
-            <option label=
-            "Other Select Deluxe Hotels - From $219/Night"
-            value="other-select-deluxe-hotels">
-                Other Select Deluxe Hotels - From
-                $219/Night
-            </option>
 
             <option label=
             "Walt Disney World Dolphin Hotel" value=
@@ -912,6 +845,16 @@ method="post">
             </option>
         </select></span></span>
     </div>
+    <div class="formInputElement short accessible">
+                                <span class="pepRichCheckbox" data-plugins=
+                                "[[&quot;pepRichCheckbox&quot;,{&quot;tabindex&quot;:&quot;0&quot;}]]">
+                                <input name="accessible" type="hidden" value=
+                                "0"><input id="accessible_5573d56a1cb90" name=
+                                "accessible" tabindex="0" type="checkbox"
+                                value="1"></span> <label class="optional" for=
+                                "accessible_5573d56a1cb90"><span class=
+                                "labelValue">Accessible Rooms</span></label>
+                            </div>
 
     <button class="pillSubmit" data-plugins=
     "[&quot;pepActiveStyleSupport&quot;]" id=
@@ -930,66 +873,4 @@ method="post">
 
                         
 </body>
-
-<?php
-if(isset($_POST)){
-    ini_set('display_errors', true); 
-    require_once ("includes/simple_html_dom.php");
-    require_once ("includes/db_conn.php");
-    $conn = db_connect();
-    $numberOfChildren = $_POST['numberOfChildren'];
-    $resort = $_POST['resort'];
-
-    //echo $resort ;
-    $resort = explode(";", $resort)[0];
-
-    $table = '`occupancy_child_'.$numberOfChildren.'`';
-    $sql = "SELECT * FROM $table WHERE `resort_id` = '$resort'";
-
-    echo $sql."<br />";
-}
-?>
-
-<table class="table table-striped">
-<tr>
-<td> Resort Name </td>
-<td> Price </td>
-<td> Room title </td>
-<td> Details </td>
-</tr>
-
-<?php 
-if($result = mysqli_query($conn,$sql)){
-    $count = 0 ;
-    while($row = mysqli_fetch_array($result)){
-            $count++;
-            echo "<tr>";
-        
-            $resort_name = $row['resort_name'];
-
-            $price = $row['price'];
-
-            $details = $row['details'];
-
-            $room_title = $row['room_title'];
-
-            //echo $resort_name."-- > ".$price." --- > ".$details." -- > ".$room_title."<br />";
-
-            echo "
-            <td> {$resort_name} </td>
-            <td> {$price}</td>
-            <td> {$room_title}</td>
-
-            <td> {$details} </td>
-            ";
-
-            echo "</tr>";
-        }
-        
-    
-}
-?>
-
-</table>
-<?php echo "Total Results ".$count ?>
 </html>
