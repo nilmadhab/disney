@@ -45,12 +45,13 @@ if(isset($_POST)){
     $numberOfChildren = $_POST['numberOfChildren'];
     $resort = $_POST['resort'];
     $accessible = $_POST['accessible'];
+    $numberOfAdults = $_POST['numberOfAdults'];
 
     //echo $resort ;
     $resort = explode(";", $resort)[0];
 
     $table = '`occupancy_child_'.$numberOfChildren.'`';
-    $sql = "SELECT * FROM $table WHERE `resort_id` = '$resort' and `accessibility` = '$accessible'";
+    $sql = "SELECT * FROM $table WHERE `resort_id` = '$resort' and `accessibility` = '$accessible' and `numberOfAdults` = '$numberOfAdults'";
 
     echo "Query: ".$sql."  ||  ";
 }

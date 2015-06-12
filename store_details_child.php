@@ -20,7 +20,7 @@ function db_connect(){
 require_once('includes/simple_html_dom.php');
 $conn = db_connect();
 $sql = "SELECT * FROM `resort_value` WHERE 1";
-for($cm = 5 ; $cm < 7 ; $cm++ )
+for($cm = 6 ; $cm < 7 ; $cm++ )
 {
 	if($result = mysqli_query($conn,$sql))
 	{
