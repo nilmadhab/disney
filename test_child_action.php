@@ -68,7 +68,7 @@ if(isset($_POST)){
 <?php 
 if($result = mysqli_query($conn,$sql)){
     $rowcount=mysqli_num_rows($result);
-    echo "Total Results: ".$rowcount ;
+    echo "<strong>Total Results: ".$rowcount."</strong>" ;
     while($row = mysqli_fetch_array($result)){
             echo "<tr>";
         
