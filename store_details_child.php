@@ -18,6 +18,7 @@ function db_connect(){
 ?>
 
 <?php
+echo "No of Adults ".$_POST['numberOfAdults']." and accessible ".$_POST['accessible']."   || ";
 require_once('includes/simple_html_dom.php');
 $conn = db_connect();
 $sql = "SELECT * FROM `resort_value` WHERE 1";
