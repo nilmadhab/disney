@@ -2,7 +2,7 @@
 
 ini_set('display_errors', true);
 error_reporting(E_ALL ^ E_NOTICE);
-
+ini_set('max_execution_time', 900); 
 register_shutdown_function('shutdownFunction');
 
 function shutDownFunction() { 
