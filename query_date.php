@@ -42,7 +42,7 @@ if(isset($_POST)){
 
 	echo "<pre>";
 
-	//print_r($_POST);
+	print_r($_POST);
 
 
 	echo "</pre>";
@@ -58,15 +58,17 @@ $numberOfAdults = $_POST['numberOfAdults'];
 $resort = $_POST['resort'];
 
 function change_date($date){
-	$date = explode("/", $date);
+	//$date = explode("/", $date);
 
-	return $date[2]."-".$date[0]."-".$date[1];
+	//return $date[2]."-".$date[0]."-".$date[1];
+	return $date;
 }
 
 $resort = explode(";", $resort)[0];
 
 
-$sql = "SELECT * FROM `occupancy_one` WHERE `resort_id` = '$resort' and `select_adult` = '$numberOfAdults' ";
+$sql = "SELECT * FROM `acessible` WHERE `resort_id` = '$resort' and 
+`select_adult` = '$numberOfAdults' and `check_in` = '$checkInDate' ";
 
 echo $sql."<br />";
 
