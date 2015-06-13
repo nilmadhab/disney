@@ -2,7 +2,7 @@
 
 ini_set('display_errors', true);
 error_reporting(E_ALL ^ E_NOTICE);
-ini_set('max_execution_time', 900); 
+ini_set('max_execution_time', 9000); 
 register_shutdown_function('shutdownFunction');
 
 function shutDownFunction() { 
@@ -41,16 +41,16 @@ $sql = "SELECT * FROM `resort_value`";
 
 
 
-$date_arr = [ ["2015-06-20","2015-06-26"],["2015-06-27","2015-07-03"],["2015-07-04","2015-07-10"],
-["2015-07-11","2015-11-17"]];
-
+/*$date_arr = [ ["2015-06-20","2015-06-26"],["2015-06-27","2015-07-03"],["2015-07-04","2015-07-10"],
+["2015-07-11","2015-11-17"]];*/
+$date_arr = [ ["2015-07-11","2015-07-17"], ["2015-07-18","2015-07-24"]];
 foreach ($date_arr as $dates) {
 
 	$current_adult = 1;
 
 	$count = 0;
 
-	$max_adult = 4;
+	$max_adult = 9;
 	while($current_adult <= 9){
 
 		if($result = mysqli_query($conn,$sql)){
