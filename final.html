@@ -3,7 +3,8 @@
 <head>
 
  <meta charset="utf-8">
-  
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Dis Calculator</title>
 
 	<!-- Latest compiled and minified CSS -->
@@ -23,6 +24,7 @@
 	#back{
 		background-image: url("background.png");
 	}
+	body {// padding-top: 70px; }
 </style>
 </head>
 <body>
@@ -47,7 +49,7 @@
   
 
 	</div>
-<div class="container">
+<div class="container" style="z-index:999">
 	
 	<div class="row" style="width:40%; margin:0 auto; margin-top:0%">
 
@@ -56,7 +58,7 @@
 		<h4>Your Walt Disney World Vacation ! </h4>
 		</div>
 
-		<form action="" method="get" style="background-color:#d6d7d9;
+		<form action="test_child_action.php" method="get" style="background-color:#d6d7d9;
 		padding: 30px 20px;border-radius:3px;border-top: 5px;
   border-top-color: #f2c510;
   border-top-style: solid;">
@@ -66,21 +68,19 @@
 		    <div class="row">
 		    	<div class="col-sm-6">
 		    	<label for="exampleInputEmail1">Check In </label>
-		    	<input name="checkIn" type="date" required>
+		    	<input name="checkIn" value="2015-06-20" type="date" required>
 
 		    	</div>
 		    	<div class="col-sm-6">
 		    	<label for="exampleInputEmail1">Check Out</label>
-		    	<input name="checkOut" type="date" required>
+		    	<input name="checkOut" value="2015-06-26" type="date" required>
 		    	</div>
 		    </div>
 		  </div>
 		  <div class="form-group">
 		    <label for="exampleInputEmail1">Disney World Hotel</label>
-		    <select class="form-control" >
-		     <option label="All Resort Hotels" value="">
-                                        All Resort Hotels
-                                    </option>
+		    <select class="form-control" name="resort">
+		    
 
 
                                     <option label=
@@ -286,28 +286,39 @@
 		  <div class="row">
 		  <div class="col-sm-6">
 		  <label for="">Adults(+18)</label>
-		  <select class="form-control">
+		  <select class="form-control" name="numberOfAdults">
 		  <option>1</option>
 		  <option>2</option>
 		  <option>3</option>
 		  <option>4</option>
 		  <option>5</option>
+		  <option>6</option>
 			</select>
 		  </div>
 		  <div class="col-sm-6">
 		  <label for="">Chilren</label>
-		  <select class="form-control">
+		  <select class="form-control" name="numberOfChildren">
 		  <option>0</option>
 		  <option>1</option>
 		  <option>2</option>
 		  <option>3</option>
 		  <option>4</option>
 		  <option>5</option>
+		  <option>6</option>
+		  <option>7</option>
 			</select>
 		  </div>
 
 		  </div>
 		  </div>
+		  <div class="formInputElement short accessible">
+            <span class="pepRichCheckbox">
+            <input name="accessible" type="hidden" value="0">
+            <input id="accessible_5573d56a1cb90" name="accessible" tabindex="0" type="checkbox"
+            value="1"></span> 
+            <label class="optional" for="accessible_5573d56a1cb90">
+            <span class="labelValue">Accessible Rooms</span></label>
+            </div>
 		
 		  <input type="submit" class="btn" 
 		  style="background-color:#2c3d51;color:#FFF; width:200px; margin-left:30%;" value="Find Prices " />
@@ -316,7 +327,7 @@
 
 </div>
 
-<div class="navbar  navbar-fixed-bottom" role="navigation" style="background-color:#2c3d51;text-align:center;color:white; padding-top:2% " >
+<div class="navbar  navbar-fixed-bottom" role="navigation" style="background-color:#2c3d51;text-align:center;color:white; padding-top:2%" >
 	
 	<p>Disclamier: Price listed on this site should be considered approximate and used for planning purpose only. </p>
 	<p>Pricing and availibility data is retrived and refrshed in every 30 minutes</p>
