@@ -60,7 +60,8 @@ $enddate = "{$yr}-{$mon}-{$date}";
 $processAdults = 10 ;  //set n+1 for n adults.
 $processChilds = 7 ;  //set n for n childs
 
-echo "<strong>STARTING THE JOB</strong>" ;
+echo "<br><strong>STARTING THE JOB</strong><br>" ;
+echo "Current timestamp ".date(DATE_COOKIE,time())."<br>" ;
 //Adult iterations
 for($am = 1 ; $am < $processAdults ; $am++ )  
 {
@@ -71,13 +72,14 @@ for($am = 1 ; $am < $processAdults ; $am++ )
 		for($a = 0 ; $a < 2 ; $a++ )
 		{
 			echo "==> <strong>Job: Adults ".$am." Childs ".$cm." Accessible ".$a."<br></strong>"; 
+			echo "Current timestamp ".date(DATE_COOKIE,time())."<br>" ;
 			if($result = mysqli_query($conn,$sql))
 			{
 				$resortcount = 0 ;
 				while($row = mysqli_fetch_array($result) )
 				{
 					$resortcount++ ;
-					$checkInDate = $startdate;
+					$checkInDate = $STARTINGdate;
 					$checkOutDate = $enddate;
 					$numberOfAdults = $am;
 					$numberOfChildren = $cm;
@@ -95,7 +97,7 @@ for($am = 1 ; $am < $processAdults ; $am++ )
 					$url = "https://disneyworld.disney.go.com/resorts/".$row['short_url']."/rates-rooms/";
 					//echo "<br>".$url ;
 					$ch = curl_init($url);
-					curl_setopt($ch, CURLOPT_VERBOSE, 1);
+					curl_setopt($ch, CURLOPT_VERBOSE, 0);
 					curl_setopt($ch, CURLOPT_COOKIE, $coockie);
 					curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 					$page = curl_exec($ch);
