@@ -60,7 +60,7 @@ $enddate = "{$yr}-{$mon}-{$date}";
 $processAdults = 10 ;  //set n+1 for n adults.
 $processChilds = 7 ;  //set n for n childs
 
-echo "<strong>STARTING THE JOB</strong>"
+echo "<strong>STARTING THE JOB</strong>" ;
 //Adult iterations
 for($am = 1 ; $am < $processAdults ; $am++ )  
 {
