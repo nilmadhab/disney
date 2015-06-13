@@ -1,4 +1,5 @@
 <?php
+//k[@Xx!=<%Y54cc3a#
 // To set cron >crontab -e or >sudo crontab -e
 //To view the log sudo grep CRON /var/log/syslog
 ?>
