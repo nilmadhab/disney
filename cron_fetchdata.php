@@ -57,9 +57,10 @@ $yr = explode("-",$startdate)[0];
 $mon = explode("-",$startdate)[1];
 $date = explode("-",$startdate)[2] + 7;
 $enddate = "{$yr}-{$mon}-{$date}";
-$processAdults = 2 ;  //set n+1 for n adults.
-$processChilds = 1 ;  //set n for n childs
+$processAdults = 10 ;  //set n+1 for n adults.
+$processChilds = 7 ;  //set n for n childs
 
+echo "<strong>STARTING THE JOB</strong>"
 //Adult iterations
 for($am = 1 ; $am < $processAdults ; $am++ )  
 {
@@ -69,13 +70,13 @@ for($am = 1 ; $am < $processAdults ; $am++ )
 		//accessible iterations
 		for($a = 0 ; $a < 2 ; $a++ )
 		{
-			echo "Job: Adults ".$am." Childs ".$cm." Accessible ".$a."<br>"; 
+			echo "==> <strong>Job: Adults ".$am." Childs ".$cm." Accessible ".$a."<br></strong>"; 
 			if($result = mysqli_query($conn,$sql))
 			{
-				$resortcount = 1 ;
+				$resortcount = 0 ;
 				while($row = mysqli_fetch_array($result) )
 				{
-					echo "Resort ".$resortcount." "; $resortcount++ ;
+					$resortcount++ ;
 					$checkInDate = $startdate;
 					$checkOutDate = $enddate;
 					$numberOfAdults = $am;
@@ -104,7 +105,7 @@ for($am = 1 ; $am < $processAdults ; $am++ )
 					$page = str_get_html($page);
 					if(!$page)
 					{
-						echo "<strong>skipped<br></strong>";
+						echo "Resort ".$resortcount." skipped<br>"; 
 						continue;
 					}
 
@@ -126,7 +127,7 @@ for($am = 1 ; $am < $processAdults ; $am++ )
 
 						if( mysqli_query($conn,$sql1) ) 
 						{
-							echo " entry made ";
+							//echo " entry made ";
 						}else
 						{
 							echo "<br>insertion failed".mysqli_error($conn)."<br>";
@@ -134,7 +135,7 @@ for($am = 1 ; $am < $processAdults ; $am++ )
 						}
 						
 					}
-					echo "<br>";
+					//echo "<br>";
 				}
 			}
 		}
