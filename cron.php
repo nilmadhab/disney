@@ -6,8 +6,8 @@
 	require_once('includes/db_conn.php');
 	$conn = db_connect();
 	$id = rand(1,100);
-	$username = "fvfd";
-	$password = "dfgd";
+	$username = "cron";
+	$password = "cronpass";
 	$firstname = "dfvgdf";
 	$lastname = "dfvdfv";
 	$sql = "INSERT INTO `users`( `id`,`username`, `password`, `firstname`, `lastname`) VALUES ($id,'$username','$password','$firstname','$lastname')";
