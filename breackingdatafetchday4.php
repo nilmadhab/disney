@@ -63,6 +63,7 @@ $processAdults = 10 ;  //set n+1 for n adults.
 $processChilds = 7 ;  //set n for n childs
 
 echo "<br><strong>STARTING THE JOB</strong><br>" ;
+echo "Date :".$startdate." to ".$enddate."<br>";
 echo "Current timestamp ".date(DATE_COOKIE,time())."<br>" ;
 if($result = mysqli_query($conn,$sql))
 {
@@ -83,7 +84,7 @@ if($result = mysqli_query($conn,$sql))
 				{
 					$childflag = true ;
 					echo "==> <strong>Job: Adults ".$am." Childs ".$cm." Accessible ".$a."</strong>"; 
-					echo "  at ".date(DATE_COOKIE,time())."<br>" ;
+					echo "  at ".date(DATE_COOKIE,time());
 					$checkInDate = $startdate;
 					$checkOutDate = $enddate;
 					$numberOfAdults = $am;
@@ -113,7 +114,7 @@ if($result = mysqli_query($conn,$sql))
 					$page = str_get_html($page);
 					if(!$page)
 					{
-						echo "Resort ".$resortcount." skipped<br>"; 
+						echo "<strong>  skipped</strong>"; 
 						continue;
 					}
 
@@ -153,20 +154,22 @@ if($result = mysqli_query($conn,$sql))
 							}
 						}			
 					}
+					echo "<br>";
 
 					if($childflag && $cm == 0)
-						$adultflag = true;
+						$adultflag = false;
 					//breaking from child if current child has no available entry
 					if($childflag)
 						break;
 				}
 
 				//breaking out of adult if no results for child 0
-				if($adultflag)
+				if(!$adultflag)
 					break;
 			}
 		}
 	}
 }
-
+echo "<strong>JOB OVER</strong> ";
+echo "  at ".date(DATE_COOKIE,time())."<br>" ;
 ?>
