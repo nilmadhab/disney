@@ -42,7 +42,7 @@ if($result = mysqli_query($conn,$sql))
 	while($row = mysqli_fetch_array($result) )
 	{
 		$resortcount++ ;
-		if($resortcount < 17 || $resortcount > 20)
+		if($resortcount < 25 || $resortcount > 28)
 			continue;
 		//echo "Resort ".$resortcount."<br>" ;
 		//accessible iterations
@@ -56,7 +56,7 @@ if($result = mysqli_query($conn,$sql))
 				for($cm = 0 ; $cm < $processChilds ; $cm++ )
 				{
 					$childflag = true ;
-					echo "==> <strong>Job5: Resort ".$resortcount." Adults ".$am." Childs ".$cm." Accessible ".$a."</strong>"."  at ".date(DATE_COOKIE,time());  
+					echo "==> <strong>Job7: Resort ".$resortcount." Adults ".$am." Childs ".$cm." Accessible ".$a."</strong>"."  at ".date(DATE_COOKIE,time());  
 					$checkInDate = $startdate;
 					$checkOutDate = $enddate;
 					$numberOfAdults = $am;
@@ -142,5 +142,5 @@ if($result = mysqli_query($conn,$sql))
 		}
 	}
 }
-echo "<strong>JOB PART 5 OVER</strong> "."  at ".date(DATE_COOKIE,time())."<br>" ;
+echo "<strong>JOB PART 7 OVER</strong> "."  at ".date(DATE_COOKIE,time())."<br>" ;
 ?>

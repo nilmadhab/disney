@@ -42,7 +42,7 @@ if($result = mysqli_query($conn,$sql))
 	while($row = mysqli_fetch_array($result) )
 	{
 		$resortcount++ ;
-		if($resortcount < 6 || $resortcount > 10)
+		if($resortcount < 5 || $resortcount > 8)
 			continue;
 		//echo "Resort ".$resortcount."<br>" ;
 		//accessible iterations
