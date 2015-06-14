@@ -1,7 +1,6 @@
 <?php
 $url1=$_SERVER['REQUEST_URI'];
-header("Refresh: 2; URL=$url1");
+header("Refresh: 5; URL=$url1");
 ?>
 
 
-<br>Connection Successful<br><strong>STARTING THE JOB</strong><br>Date :2015-06-28 to 2015-07-05<br>Current timestamp Sunday, 14-Jun-2015 01:09:36 IST<br>Resort 1<br>==> <strong>Job: Adults 1 Childs 0 Accessible 0</strong>  at Sunday, 14-Jun-2015 01:09:36 IST<br>==> <strong>Job: Adults 1 Childs 1 Accessible 0</strong>  at Sunday, 14-Jun-2015 01:09:42 IST<br>==> <strong>Job: Adults 1 Childs 2 Accessible 0</strong>  at Sunday, 14-Jun-2015 01:09:59 IST<br>==> <strong>Job: Adults 1 Childs 3 Accessible 0</strong>  at Sunday, 14-Jun-2015 01:10:05 IST<br>==> <strong>Job: Adults 1 Childs 4 Accessible 0</strong>  at Sunday, 14-Jun-2015 01:10:18 IST<br>==> <strong>Job: Adults 1 Childs 5 Accessible 0</strong>  at Sunday, 14-Jun-2015 01:10:25 IST<br>==> <strong>Job: Adults 2 Childs 0 Accessible 0</strong>  at Sunday, 14-Jun-2015 01:10:38 IST<br>==> <strong>Job: Adults 2 Childs 1 Accessible 0</strong>  at Sunday, 14-Jun-2015 01:10:43 IST<br>==> <strong>Job: Adults 2 Childs 2 Accessible 0</strong>  at Sunday, 14-Jun-2015 01:10:49 IST<br>==> <strong>Job: Adults 2 Childs 3 Accessible 0</strong>  at Sunday, 14-Jun-2015 01:10:54 IST
