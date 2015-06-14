@@ -43,7 +43,7 @@ if($result = mysqli_query($conn,$sql))
 	{
 		$resortcount++ ;
 		if($resortcount < 26 )
-			break;
+			continue;
 		//echo "Resort ".$resortcount."<br>" ;
 		//accessible iterations
 		for($a = 0 ; $a < 2 ; $a++ )
