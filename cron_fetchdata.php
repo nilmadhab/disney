@@ -1,5 +1,5 @@
 <?php
-ini_set('display_errors', true);
+//ini_set('display_errors', true);
 ini_set('max_execution_time',0); 
 error_reporting(E_ALL ^ E_NOTICE);
 function db_connect(){
