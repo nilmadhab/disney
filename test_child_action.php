@@ -31,7 +31,7 @@ if(isset($_GET)){
     //echo $resort ;
     $resort = explode(";", $resort)[0];
 
-    $table = '`day_1`';
+    $table = '`cron_day_1`';
     $sql = "SELECT * FROM $table WHERE `resort_id` = '$resort' and `accessibility` = '$accessible' and `noAdults` = '$numberOfAdults' and `noChilds` = '$numberOfChildren'";
 
     //echo "Query: ".$sql."  ||  ";
