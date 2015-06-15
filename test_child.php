@@ -27,7 +27,7 @@
     body {// padding-top: 70px; }
 </style>
 </head>
-<body>
+<body   style="overflow-x: hidden;">
 <div class="row">
         <nav class="navbar" style="background-color:#2c3d51;">
 
@@ -327,15 +327,15 @@
 
 </div>
 
-<div class="navbar  navbar-fixed-bottom" role="navigation" style="background-color:#2c3d51;text-align:center;color:white; padding-top:2%" >
+<div class="navbar  navbar-fixed-bottom" role="navigation" style="background-color:#2c3d51;text-align:center;color:white; padding-top:1%;height: 96px;" >
     
-    <p>Disclamier: Price listed on this site should be considered approximate and used for planning purpose only. </p>
-    <p>Pricing and availibility data is retrived and refrshed in every 30 minutes</p>
+    <p class="small">Disclamier: Price listed on this site should be considered approximate and used for planning purpose only. 
+    <br>Pricing and availibility data is retrived and refrshed in every 30 minutes</p>
 
-    <img src="logo.png" style="  width: 179px;margin-top: -20px;" / >
+    <img src="logo.png" style="  width: 179px;margin-top: -27px;" / >
 
 
-    <p>Copyright @2015 Discalc. All rights Reserved </p>
+    <p style="  margin-top: -16px;">Copyright @2015 Discalc. All rights Reserved </p>
 
 
 </div>
