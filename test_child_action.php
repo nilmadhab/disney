@@ -34,7 +34,7 @@ if(isset($_GET)){
     $table = '`day_1`';
     $sql = "SELECT * FROM $table WHERE `resort_id` = '$resort' and `accessibility` = '$accessible' and `noAdults` = '$numberOfAdults' and `noChilds` = '$numberOfChildren'";
 
-    //echo "Query: ".$sql."  ||  ";
+    echo "Query: ".$sql."  ||  ";
 }
 ?>
 
