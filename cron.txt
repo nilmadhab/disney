@@ -1,0 +1,114 @@
+# Edit this file to introduce tasks to be run by cron.
+#
+# Each task to run has to be defined through a single line
+# indicating with different fields when the task will be run
+# and what command to run for the task
+#
+# To define the time you can provide concrete values for
+# minute (m), hour (h), day of month (dom), month (mon),
+# and day of week (dow) or use '*' in these fields (for 'any').#
+# Notice that tasks will be started based on the cron's system
+# daemon's notion of time and timezones.
+#
+# Output of the crontab jobs (including errors) is sent through
+# email to the user the crontab file belongs to (unless redirected).
+#
+# For example, you can run a backup of all your user accounts
+# at 5 a.m every week with:
+# 0 5 * * 1 tar -zcf /var/backups/home.tgz /home/
+#
+# For more information see the manual pages of crontab(5) and cron(8)
+#
+# m h  dom mon dow   command
+
+0 * * * * php /var/www/html/harvest_pre.php >> /var/www/html/log_cron.php 2>&1
+
+1 * * * * php /var/www/html/harvest_1.php 0 1 >> /var/www/html/log_cron.php 2>&1
+1 * * * * php /var/www/html/harvest_2.php 0 1 >> /var/www/html/log_cron.php 2>&1
+1 * * * * php /var/www/html/harvest_3.php 0 1 >> /var/www/html/log_cron.php 2>&1
+1 * * * * php /var/www/html/harvest_4.php 0 1 >> /var/www/html/log_cron.php 2>&1
+1 * * * * php /var/www/html/harvest_5.php 0 1 >> /var/www/html/log_cron.php 2>&1
+1 * * * * php /var/www/html/harvest_6.php 0 1 >> /var/www/html/log_cron.php 2>&1
+1 * * * * php /var/www/html/harvest_7.php 0 1 >> /var/www/html/log_cron.php 2>&1
+1 * * * * php /var/www/html/harvest_8.php 0 1 >> /var/www/html/log_cron.php 2>&1
+
+1 * * * * php /var/www/html/harvest_1.php 1 2 >> /var/www/html/log_cron.php 2>&1
+1 * * * * php /var/www/html/harvest_2.php 1 2 >> /var/www/html/log_cron.php 2>&1
+1 * * * * php /var/www/html/harvest_3.php 1 2 >> /var/www/html/log_cron.php 2>&1
+1 * * * * php /var/www/html/harvest_4.php 1 2 >> /var/www/html/log_cron.php 2>&1
+1 * * * * php /var/www/html/harvest_5.php 1 2 >> /var/www/html/log_cron.php 2>&1
+1 * * * * php /var/www/html/harvest_6.php 1 2 >> /var/www/html/log_cron.php 2>&1
+1 * * * * php /var/www/html/harvest_7.php 1 2 >> /var/www/html/log_cron.php 2>&1
+1 * * * * php /var/www/html/harvest_8.php 1 2 >> /var/www/html/log_cron.php 2>&1
+
+1 * * * * php /var/www/html/harvest_1.php 2 3 >> /var/www/html/log_cron.php 2>&1
+1 * * * * php /var/www/html/harvest_2.php 2 3 >> /var/www/html/log_cron.php 2>&1
+1 * * * * php /var/www/html/harvest_3.php 2 3 >> /var/www/html/log_cron.php 2>&1
+1 * * * * php /var/www/html/harvest_4.php 2 3 >> /var/www/html/log_cron.php 2>&1
+1 * * * * php /var/www/html/harvest_5.php 2 3 >> /var/www/html/log_cron.php 2>&1
+1 * * * * php /var/www/html/harvest_6.php 2 3 >> /var/www/html/log_cron.php 2>&1
+1 * * * * php /var/www/html/harvest_7.php 2 3 >> /var/www/html/log_cron.php 2>&1
+1 * * * * php /var/www/html/harvest_8.php 2 3 >> /var/www/html/log_cron.php 2>&1
+
+1 * * * * php /var/www/html/harvest_1.php 3 4 >> /var/www/html/log_cron.php 2>&1
+1 * * * * php /var/www/html/harvest_2.php 3 4 >> /var/www/html/log_cron.php 2>&1
+1 * * * * php /var/www/html/harvest_3.php 3 4 >> /var/www/html/log_cron.php 2>&1
+1 * * * * php /var/www/html/harvest_4.php 3 4 >> /var/www/html/log_cron.php 2>&1
+1 * * * * php /var/www/html/harvest_5.php 3 4 >> /var/www/html/log_cron.php 2>&1
+1 * * * * php /var/www/html/harvest_6.php 3 4 >> /var/www/html/log_cron.php 2>&1
+1 * * * * php /var/www/html/harvest_7.php 3 4 >> /var/www/html/log_cron.php 2>&1
+1 * * * * php /var/www/html/harvest_8.php 3 4 >> /var/www/html/log_cron.php 2>&1
+
+1 * * * * php /var/www/html/harvest_1.php 4 5 >> /var/www/html/log_cron.php 2>&1
+1 * * * * php /var/www/html/harvest_2.php 4 5 >> /var/www/html/log_cron.php 2>&1
+1 * * * * php /var/www/html/harvest_3.php 4 5 >> /var/www/html/log_cron.php 2>&1
+1 * * * * php /var/www/html/harvest_4.php 4 5 >> /var/www/html/log_cron.php 2>&1
+1 * * * * php /var/www/html/harvest_5.php 4 5 >> /var/www/html/log_cron.php 2>&1
+1 * * * * php /var/www/html/harvest_6.php 4 5 >> /var/www/html/log_cron.php 2>&1
+1 * * * * php /var/www/html/harvest_7.php 4 5 >> /var/www/html/log_cron.php 2>&1
+1 * * * * php /var/www/html/harvest_8.php 4 5 >> /var/www/html/log_cron.php 2>&1
+
+1 * * * * php /var/www/html/harvest_1.php 5 6 >> /var/www/html/log_cron.php 2>&1
+1 * * * * php /var/www/html/harvest_2.php 5 6 >> /var/www/html/log_cron.php 2>&1
+1 * * * * php /var/www/html/harvest_3.php 5 6 >> /var/www/html/log_cron.php 2>&1
+1 * * * * php /var/www/html/harvest_4.php 5 6 >> /var/www/html/log_cron.php 2>&1
+1 * * * * php /var/www/html/harvest_5.php 5 6 >> /var/www/html/log_cron.php 2>&1
+1 * * * * php /var/www/html/harvest_6.php 5 6 >> /var/www/html/log_cron.php 2>&1
+1 * * * * php /var/www/html/harvest_7.php 5 6 >> /var/www/html/log_cron.php 2>&1
+1 * * * * php /var/www/html/harvest_8.php 5 6 >> /var/www/html/log_cron.php 2>&1
+
+1 * * * * php /var/www/html/harvest_1.php 6 7 >> /var/www/html/log_cron.php 2>&1
+1 * * * * php /var/www/html/harvest_2.php 6 7 >> /var/www/html/log_cron.php 2>&1
+1 * * * * php /var/www/html/harvest_3.php 6 7 >> /var/www/html/log_cron.php 2>&1
+1 * * * * php /var/www/html/harvest_4.php 6 7 >> /var/www/html/log_cron.php 2>&1
+1 * * * * php /var/www/html/harvest_5.php 6 7 >> /var/www/html/log_cron.php 2>&1
+1 * * * * php /var/www/html/harvest_6.php 6 7 >> /var/www/html/log_cron.php 2>&1
+1 * * * * php /var/www/html/harvest_7.php 6 7 >> /var/www/html/log_cron.php 2>&1
+1 * * * * php /var/www/html/harvest_8.php 6 7 >> /var/www/html/log_cron.php 2>&1
+
+1 * * * * php /var/www/html/harvest_1.php 7 8 >> /var/www/html/log_cron.php 2>&1
+1 * * * * php /var/www/html/harvest_2.php 7 8 >> /var/www/html/log_cron.php 2>&1
+1 * * * * php /var/www/html/harvest_3.php 7 8 >> /var/www/html/log_cron.php 2>&1
+1 * * * * php /var/www/html/harvest_4.php 7 8 >> /var/www/html/log_cron.php 2>&1
+1 * * * * php /var/www/html/harvest_5.php 7 8 >> /var/www/html/log_cron.php 2>&1
+1 * * * * php /var/www/html/harvest_6.php 7 8 >> /var/www/html/log_cron.php 2>&1
+1 * * * * php /var/www/html/harvest_7.php 7 8 >> /var/www/html/log_cron.php 2>&1
+1 * * * * php /var/www/html/harvest_8.php 7 8 >> /var/www/html/log_cron.php 2>&1
+
+1 * * * * php /var/www/html/harvest_1.php 8 9 >> /var/www/html/log_cron.php 2>&1
+1 * * * * php /var/www/html/harvest_2.php 8 9 >> /var/www/html/log_cron.php 2>&1
+1 * * * * php /var/www/html/harvest_3.php 8 9 >> /var/www/html/log_cron.php 2>&1
+1 * * * * php /var/www/html/harvest_4.php 8 9 >> /var/www/html/log_cron.php 2>&1
+1 * * * * php /var/www/html/harvest_5.php 8 9 >> /var/www/html/log_cron.php 2>&1
+1 * * * * php /var/www/html/harvest_6.php 8 9 >> /var/www/html/log_cron.php 2>&1
+1 * * * * php /var/www/html/harvest_7.php 8 9 >> /var/www/html/log_cron.php 2>&1
+1 * * * * php /var/www/html/harvest_8.php 8 9 >> /var/www/html/log_cron.php 2>&1
+
+1 * * * * php /var/www/html/harvest_1.php 9 10 >> /var/www/html/log_cron.php 2>&1
+1 * * * * php /var/www/html/harvest_2.php 9 10 >> /var/www/html/log_cron.php 2>&1
+1 * * * * php /var/www/html/harvest_3.php 9 10 >> /var/www/html/log_cron.php 2>&1
+1 * * * * php /var/www/html/harvest_4.php 9 10 >> /var/www/html/log_cron.php 2>&1
+1 * * * * php /var/www/html/harvest_5.php 9 10 >> /var/www/html/log_cron.php 2>&1
+1 * * * * php /var/www/html/harvest_6.php 9 10 >> /var/www/html/log_cron.php 2>&1
+1 * * * * php /var/www/html/harvest_7.php 9 10 >> /var/www/html/log_cron.php 2>&1
+1 * * * * php /var/www/html/harvest_8.php 9 10 >> /var/www/html/log_cron.php 2>&1
