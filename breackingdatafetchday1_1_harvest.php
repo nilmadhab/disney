@@ -104,8 +104,8 @@ if($result = mysqli_query($conn,$sql))
 							$insertflag = false ;
 						}
 
-						$sql1 = "INSERT INTO $crontable ( `noAdults`, `noChilds`, `accessibility`, `resort_id`, `resort_name`, `max_adult`, `price`, `details`, `room_title`)
-						 VALUES ('$numberOfAdults','$numberOfChildren','$accessible','$resort','$resort_name','$max_adult','$price','$details','$room_title')";
+						$sql1 = "INSERT INTO $crontable ( `startdate`, `enddate`, `noAdults`, `noChilds`, `accessibility`, `resort_id`, `resort_name`, `max_adult`, `price`, `details`, `room_title`)
+						 VALUES ('$startdate','$enddate','$numberOfAdults','$numberOfChildren','$accessible','$resort','$resort_name','$max_adult','$price','$details','$room_title')";
 
 						//echo $sql1."<br />";
 
