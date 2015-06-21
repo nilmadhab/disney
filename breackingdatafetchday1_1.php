@@ -21,12 +21,13 @@ require_once('includes/simple_html_dom.php');
 $conn = db_connect();
 
 //resort 1 to 5
-$maintable = '`day_1`';
-$crontable = '`cron_day_1`';
 $startdate = date('Y-m-d'); 
-//$startdate = '2015-06-20'; 
 $enddate = date('Y-m-d',strtotime("+1 week"));
-//$enddate = '2015-06-26';
+$diff1 = date_diff(date_create($startdate),date_create(date('Y-m-d')))->d;
+$diff2 = date_diff(date_create($enddate),date_create(date('Y-m-d')))->d;
+$maintable = '`day_'.$diff1.'_'.$diff2.'`';
+$crontable = '`cron_day_'.$diff1.'_'.$diff2.'`';
+echo $maintable."<br>";
 
 //fetching data
 $sql = "SELECT * FROM `resort_value`";
@@ -36,7 +37,7 @@ $processChilds = 7 ;  //set n for n childs
 //echo "<br><strong>STARTING THE JOB</strong><br>" ;
 //echo "Date :".$startdate." to ".$enddate."<br>";
 //echo "Current timestamp ".date(DATE_COOKIE,time())."<br>" ;
-if($result = mysqli_query($conn,$sql))
+/*if($result = mysqli_query($conn,$sql))
 {
 	$resortcount = 0 ;
 	while($row = mysqli_fetch_array($result) )
@@ -141,6 +142,6 @@ if($result = mysqli_query($conn,$sql))
 			}
 		}
 	}
-}
+}*/
 echo "<strong>JOB PART 1 OVER</strong> "."  at ".date(DATE_COOKIE,time())."<br>" ;
 ?>
