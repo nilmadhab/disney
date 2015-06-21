@@ -26,14 +26,15 @@ $crontable = '`cron_day_1`';
 //$enddate = '2015-06-26';
 
 $current = 0;
-$max = 1;
+$max = 3;
 
 while ($current <= $max) {
-	$end = $current +1;
+	$end = $current +3;
 	$startdate = date('Y-m-d',strtotime("+$current day")); 
 	//$startdate = '2015-06-20'; 
 	$enddate = date('Y-m-d',strtotime("+$end day"));
 	echo "nil here<br />";
+	$current +=1;
 	echo $startdate."-->".$enddate."<br />";
 	//fetching data
 	$sql = "SELECT * FROM `resort_value`";
@@ -87,7 +88,7 @@ while ($current <= $max) {
 						curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 						$page = curl_exec($ch);
 						curl_close($ch);
-						echo $page ;
+						//echo $page ;
 
 						$page = str_get_html($page);
 						if(!$page)
