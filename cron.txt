@@ -22,6 +22,7 @@
 # m h  dom mon dow   command
 49 * * * * php /var/www/html/harvest_pre.php >> /var/www/html/log_cron.php 2>&1
 
+
 50 * * * * php /var/www/html/harvest_1.php 0 1 >> /var/www/html/log_cron.php 2>&1
 50 * * * * php /var/www/html/harvest_2.php 0 1 >> /var/www/html/log_cron.php 2>&1
 50 * * * * php /var/www/html/harvest_3.php 0 1 >> /var/www/html/log_cron.php 2>&1
