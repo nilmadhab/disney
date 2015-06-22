@@ -59,7 +59,7 @@
         <h4>Your Walt Disney World Vacation ! </h4>
         </div>
 
-        <form action="mul_date_action.php" method="get" style="background-color:#d6d7d9;
+        <form action="test_child_action.php" method="get" style="background-color:#d6d7d9;
         padding: 30px 20px;border-radius:3px;border-top: 5px;
   border-top-color: #f2c510;
   border-top-style: solid;">

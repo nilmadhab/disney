@@ -23,10 +23,19 @@ if(isset($_GET)){
 
     $checkin = $_GET['checkIn'];
     $checkout = $_GET['checkOut'];
-    $numberOfChildren = $_GET['numberOfChildren'];
+    $Childrens = $_GET['numberOfChildren'];
     $resort = $_GET['resort'];
     $accessible = $_GET['accessible'];
-    $numberOfAdults = $_GET['numberOfAdults'];
+    $Adults = $_GET['numberOfAdults'];
+
+    $numberOfChildren = 0 ;
+    for($i = 0 ; $i < $Childrens ;$i++ )
+    {
+        if($_GET['child_'.$i] < 4 || $_GET['child_'.$i] == 'infant')
+            $numberOfChildren++ ;
+    }
+    $numberOfAdults = $Adults + $Childrens - $numberOfChildren ;
+
 
     //echo $resort ;
     $resort = explode(";", $resort)[0];
