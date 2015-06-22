@@ -40,7 +40,7 @@ if(isset($_GET)){
     //echo $resort ;
     $resort = explode(";", $resort)[0];
     $diff1 = date_diff(date_create($checkout),date_create($checkin))->d;
-    echo "datediff ".$diff1."<br>" ; 
+    //echo "datediff ".$diff1."<br>" ; 
 
     $table = '`day_1`';
     $sql = "SELECT *,count(*) as cont FROM `day_harvest` WHERE `startdate` >= '$checkin' and `enddate` <= '$checkout' and `noAdults` = '$numberOfAdults' and `noChilds` = '$numberOfChildren' and `accessibility` = '$accessible' and `resort_id`= '$resort' group by room_title HAVING cont = '$diff1'" ;
@@ -54,7 +54,7 @@ if(isset($_GET)){
 if($result = mysqli_query($conn,$sql)){
     $rowcount=mysqli_num_rows($result);
     if($rowcount == 0)
-        echo "Sorry !!<br>No data available." ;
+        echo "<br><h1><strong>Sorry !!<br>No data available.</strong></h1>" ;
     else
     {
         echo "<strong>Total Results: ".$rowcount."</strong>" ;
