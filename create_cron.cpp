@@ -20,7 +20,7 @@ int main()
 	cin >> days ;
 	cin >> start_m >> start_h ;
 
-	cout << start_m-1 << " " <<  start_h << "," << (start_h + 12)%24 << " * * * rm log_cron.php" << endl;
+	//cout << start_m-1 << " " <<  start_h << "," << (start_h + 12)%24 << " * * * rm log_cron.php" << endl;
 	cout << start_m << " " <<  start_h << "," << (start_h + 12)%24 << " * * * php /var/www/html/harvest_pre.php >> /var/www/html/log_cron.php 2>&1" << endl << endl;
 
 	int h = start_h ;
