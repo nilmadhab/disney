@@ -323,10 +323,10 @@
            $(document).ready(function(){
 
      $('#child').on('change', function() {
-         var no= this.value ; 
+         var no = this.value ; 
          var str = '';
           
-         for (i = 1; i < no+1; i++) {
+         for (i = 0; i < no ; i++) {
             var txt1 = '<div class="col-sm-4"  ><select class="form-control" name="child_'+i+ '"><option >infant</option><option  >1</option><option  >2</option><option  >3</option><option >4</option><option  >5</option><option  >6</option><option  >7</option><option   >8</option><option  >9</option><option >2</option><option >10</option></select></div>';
              str +=txt1;
              
