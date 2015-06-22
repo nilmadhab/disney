@@ -1,23 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>DisneyWorld</title>
+    <title>DisneyWorld</title>
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 
 <!-- Optional theme -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.8.1/bootstrap-table.min.css">
-
-<!-- Latest compiled and minified JavaScript -->
-<script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.8.1/bootstrap-table.min.js"></script>
-
-<!-- Latest compiled and minified Locales -->
-<script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.8.1/locale/bootstrap-table-zh-CN.min.js"></script>
 </head>
 
 <?php
@@ -66,16 +58,13 @@ if($result = mysqli_query($conn,$sql)){
     else
     {
         echo "<strong>Total Results: ".$rowcount."</strong>" ;
-        echo "<table data-toggle="table">
-            <thead>
+        echo "<table class='table table-striped'>
             <tr>
             <td> Resort Name </td>
             <td> Price </td>
             <td> Room title </td>
             <td> Details </td>
-            </tr>
-            </thead>
-            <tbody>" ;
+            </tr>" ;
 
         while($row = mysqli_fetch_array($result)){
                 echo "<tr>";
@@ -100,9 +89,9 @@ if($result = mysqli_query($conn,$sql)){
 
                 echo "</tr>";
             }
-    }  
+        }  
 }
 ?>
-</tbody>
+
 </table>
 </html>
