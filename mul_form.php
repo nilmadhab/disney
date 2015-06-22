@@ -294,6 +294,9 @@
           <option>4</option>
           <option>5</option>
           <option>6</option>
+          <option>7</option>
+          <option>8</option>
+          <option>9</option>
             </select>
           </div>
           <div class="col-sm-6">
@@ -306,18 +309,15 @@
           <option>4</option>
           <option>5</option>
           <option>6</option>
-          <option>7</option>
             </select>
           </div>
         </div>
         </div>
         <div class="form-group">
         
-           <div id="dynamic" class="row">
-               
-           </div>
-           </div>
-       </form>
+           <div id="dynamic" class="row"></div>
+        </div>
+      
       
        <script>
            $(document).ready(function(){
@@ -326,8 +326,8 @@
          var no= this.value ; 
          var str = '';
           
-         for (i = 0; i < no; i++) {
-            var txt1 = '<div class="col-sm-2"  ><select class="form-control" name="child_'+i+ '"><option >infant</option><option  >1</option><option  >2</option><option  >3</option><option >4</option><option  >5</option><option  >6</option><option  >7</option><option   >8</option><option  >9</option><option >2</option><option >10</option></select></div>';
+         for (i = 1; i < no+1; i++) {
+            var txt1 = '<div class="col-sm-4"  ><select class="form-control" name="child_'+i+ '"><option >infant</option><option  >1</option><option  >2</option><option  >3</option><option >4</option><option  >5</option><option  >6</option><option  >7</option><option   >8</option><option  >9</option><option >2</option><option >10</option></select></div>';
              str +=txt1;
              
                  
@@ -337,8 +337,7 @@
         });
            </script>
 
-          </div>
-          </div>
+          
           <div class="formInputElement short accessible">
             <span class="pepRichCheckbox">
             <input name="accessible" type="hidden" value="0">
