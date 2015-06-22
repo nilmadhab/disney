@@ -30,7 +30,7 @@ if(isset($_GET)){
 
     //echo $resort ;
     $resort = explode(";", $resort)[0];
-    $diff1 = date_diff(date_create($startdate),date_create(date('Y-m-d')))->d;
+    $diff1 = date_diff(date_create($checkout),date_create($checkin))->d;
     echo "datediff ".$diff1."<br>" ; 
 
     $table = '`day_1`';
