@@ -12,7 +12,8 @@
 
 <!-- Optional theme -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
-
+<script src="http://code.jquery.com/jquery-latest.min.js"
+        type="text/javascript"></script>
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 
@@ -297,7 +298,7 @@
           </div>
           <div class="col-sm-6">
           <label for="">Chilren</label>
-          <select class="form-control" name="numberOfChildren">
+          <select class="form-control" id="child" name="numberOfChildren">
           <option>0</option>
           <option>1</option>
           <option>2</option>
@@ -308,6 +309,33 @@
           <option>7</option>
             </select>
           </div>
+        </div>
+        </div>
+        <div class="form-group">
+        
+           <div id="dynamic" class="row">
+               
+           </div>
+           </div>
+       </form>
+      
+       <script>
+           $(document).ready(function(){
+
+     $('#child').on('change', function() {
+         var no= this.value ; 
+         var str = '';
+          
+         for (i = 0; i < no; i++) {
+            var txt1 = '<div class="col-sm-2"  ><select class="form-control" name="child_'+i+ '"><option >infant</option><option  >1</option><option  >2</option><option  >3</option><option >4</option><option  >5</option><option  >6</option><option  >7</option><option   >8</option><option  >9</option><option >2</option><option >10</option></select></div>';
+             str +=txt1;
+             
+                 
+         }
+        $("#dynamic").html(str);
+        });
+        });
+           </script>
 
           </div>
           </div>
