@@ -99,14 +99,14 @@
                     $( "#checkin" ).change(function() {
                         //alert( "Handler for .change() called." );
                         var startDate = new Date($('#checkin').val());
-                        var endDate = new Date();
+                        var endDate = new Date($('#checkin').val());
                         console.log("start date "+startDate);
                        // var currentTime = new Date();
                         endDate.setDate(startDate.getDate()+7);
 
                          console.log("selected date "+endDate);
 
-                        var max_date = new Date();
+                        var max_date = new Date($('#checkin').val());
 
                          max_date.setDate(startDate.getDate()+10);
                          console.log("max_date  "+max_date);
@@ -114,8 +114,8 @@
                         $("#checkout").attr("min",formatDate(startDate));
                         $("#checkout").attr("value",formatDate(endDate) ) ;
                          $("#checkout").attr("max",formatDate(max_date) ) ;
-                        console.log(startDate);
-                        console.log(endDate);
+                        //console.log(startDate);
+                        //console.log(endDate);
                         });
                 </script>
             </div>
