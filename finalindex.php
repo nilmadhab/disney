@@ -79,7 +79,9 @@
                         max="<?php echo date("Y-m-d",strtotime("+10 day")); ?>" type="date" required>
                 </div>
                 <script type="text/javascript">
-                function formatDate(x) {
+                $(document).ready(function(){
+
+                      function formatDate(x) {
                     y = 'yyyy-MM-dd';
                                     var z = {
                         M: x.getMonth() + 1,
@@ -117,6 +119,9 @@
                         //console.log(startDate);
                         //console.log(endDate);
                         });
+                    
+                });
+              
                 </script>
             </div>
           </div>
