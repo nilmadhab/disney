@@ -120,6 +120,14 @@
                         //console.log(endDate);
                         });
                     
+                    $( "#checkout" ).change(function() {
+                        alert("nil ");
+                        var endDate = new Date($('#checkout').val());
+
+                         $("#checkout").attr("value",formatDate(endDate) ) ;
+
+                    });
+                    
                 });
               
                 </script>

@@ -21,14 +21,14 @@ int main()
 	cin >> start_m >> start_h ;
 
 	//cout << start_m-1 << " " <<  start_h << "," << (start_h + 12)%24 << " * * * rm log_cron.php" << endl;
-	cout << start_m << " " <<  start_h << "," << (start_h + 12)%24 << " * * * php /var/www/html/harvest_pre.php >> /var/www/html/log_cron.php 2>&1" << endl << endl;
+	cout << start_m << " " <<  start_h << " * * * php /var/www/html/harvest_pre.php >> /var/www/html/log_cron.php 2>&1" << endl << endl;
 
 	int h = start_h ;
 	int m = start_m + 1 ;
 	fr(i,0,days)
 	{
 		fr(j,0,8)
-			cout << m << " " <<  h << "," << (h + 12)%24 << " * * * php /var/www/html/harvest_" << j+1 << ".php " << i << " " << i+1 << " >> /var/www/html/log_cron.php 2>&1 " << endl ;
+			cout << m << " " <<  h << " * * * php /var/www/html/harvest_" << j+1 << ".php " << i << " " << i+1 << " >> /var/www/html/log_cron.php 2>&1 " << endl ;
 		m += 20 ;
 		if(m  >= 60 )
 		{
