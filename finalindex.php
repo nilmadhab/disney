@@ -69,20 +69,66 @@
             <div class="row">
                 <div class="col-sm-6">
                 <label for="exampleInputEmail1">Check In </label>
-                <input name="checkIn" value="2015-06-20" type="date" required>
+                <input name="checkIn" id="checkin" min="<?php echo date("Y-m-d"); ?>" value="<?php echo date("Y-m-d"); ?>" type="date" required>
 
                 </div>
                 <div class="col-sm-6">
                 <label for="exampleInputEmail1">Check Out</label>
-                <input name="checkOut" value="2015-06-26" type="date" required>
+                <input name="checkOut" id="checkout" min="<?php echo date("Y-m-d",strtotime("+1 day")); ?>" 
+                        value="<?php echo date("Y-m-d",strtotime("+7 day")); ?>" 
+                        max="<?php echo date("Y-m-d",strtotime("+10 day")); ?>" type="date" required>
                 </div>
+                <script type="text/javascript">
+                function formatDate(x) {
+                    y = 'yyyy-MM-dd';
+                                    var z = {
+                        M: x.getMonth() + 1,
+                        d: x.getDate(),
+                        h: x.getHours(),
+                        m: x.getMinutes(),
+                        s: x.getSeconds()
+                    };
+                    y = y.replace(/(M+|d+|h+|m+|s+)/g, function(v) {
+                        return ((v.length > 1 ? "0" : "") + eval('z.' + v.slice(-1))).slice(-2)
+                    });
+
+                    return y.replace(/(y+)/g, function(v) {
+                        return x.getFullYear().toString().slice(-v.length)
+                    });
+                }
+                    $( "#checkin" ).change(function() {
+                        //alert( "Handler for .change() called." );
+                        var startDate = new Date($('#checkin').val());
+                        var endDate = new Date();
+                        console.log("start date "+startDate);
+                       // var currentTime = new Date();
+                        endDate.setDate(startDate.getDate()+7);
+
+                         console.log("selected date "+endDate);
+
+                        var max_date = new Date();
+
+                         max_date.setDate(startDate.getDate()+10);
+                         console.log("max_date  "+max_date);
+                         //startDate.setDate(startDate.getDate()+1);
+                        $("#checkout").attr("min",formatDate(startDate));
+                        $("#checkout").attr("value",formatDate(endDate) ) ;
+                         $("#checkout").attr("max",formatDate(max_date) ) ;
+                        console.log(startDate);
+                        console.log(endDate);
+                        });
+                </script>
             </div>
           </div>
           <div class="form-group">
             <label for="exampleInputEmail1">Disney World Hotel</label>
             <select class="form-control" name="resort">
             
-
+                                    <option label=
+                                    "All resort"
+                                    value="-1;entityType=resort">
+                                        ALL
+                                    </option>
 
                                     <option label=
                                     "Disney's Animal Kingdom Villas - Jambo House"
