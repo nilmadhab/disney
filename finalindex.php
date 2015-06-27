@@ -29,7 +29,15 @@
 </style>
 </head>
 <body   style="overflow-x: hidden;">
+
+
+
+
+
 <div class="row">
+
+<div class="row">
+    <div class="row">
         <nav class="navbar" style="background-color:#2c3d51;">
 
             <div class="row" style="width:50%;margin:0 auto;">
@@ -50,7 +58,10 @@
   
 
     </div>
-<div class="container" style="z-index:999">
+</div>
+
+<div class="row">
+    <div class="container" style="z-index:999">
     
     <div class="row" style="width:40%; margin:0 auto; margin-top:0%">
 
@@ -121,7 +132,7 @@
                         });
                     
                     $( "#checkout" ).change(function() {
-                        alert("nil ");
+                        //alert("nil ");
                         var endDate = new Date($('#checkout').val());
 
                          $("#checkout").attr("value",formatDate(endDate) ) ;
@@ -413,7 +424,10 @@
 
 </div>
 
-<div class="navbar  navbar-fixed-bottom" role="navigation" style="background-color:#2c3d51;text-align:center;color:white; padding-top:1%;height: 96px;" >
+</div>
+
+    <div class="row">
+        <div class="navbar  navbar-fixed-bottom" role="navigation" style="background-color:#2c3d51;text-align:center;color:white; padding-top:1%;height: 96px;" >
     
     <p class="small">Disclamier: Price listed on this site should be considered approximate and used for planning purpose only. 
     <br>Pricing and availibility data is retrived and refrshed in every 30 minutes</p>
@@ -425,6 +439,7 @@
 
 
 </div>
-
+    </div>
+</div>
 </body>
 </html>
