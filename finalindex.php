@@ -37,11 +37,23 @@
     margin:0px;
   }
 
-  .navbar-fixed-bottom{
-  //position: relative;
-  right: 0;
-  bottom: 0;
-  z-index: 1;
+      .navbar-fixed-bottom{
+      position: relative;
+      right: 0;
+      bottom: 0;
+      z-index: 1;
+    }
+    #form_contain{
+        width:80%;
+    }
+
+
+}
+
+@media (min-width: 768px) {
+    #form_contain{
+        width:40%;
+    }
 }
 </style>
 </head>
@@ -77,7 +89,7 @@
     <div class="row">
         <div class="container" style="z-index:999">
 
-        <div class="row" style="width:40%; margin:0 auto; margin-top:0%">
+        <div class="row" id="form_contain" style="margin:0 auto; margin-top:0%">
 
             <div class="row" style="text-align:center; color:white">
             <h2> <font face="Arial Black">The Quickest Way to Price</font></h2>
