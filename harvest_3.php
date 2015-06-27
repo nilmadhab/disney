@@ -14,6 +14,24 @@ function db_connect(){
 	
 	return $con;
 }
+function clean($string) {
+		$string =strip_tags($string,'');
+      $string = str_replace(' ', '-', $string); // Replaces all spaces with hyphens.
+    $string=preg_replace('/[^A-Za-z0-9.\-]/', '', $string);
+    $string=str_replace('-',' ',$string);// replace all hyphen again with space
+    $string=str_replace('nbsp','', $string);   
+     $string=str_replace('8211','', $string);   
+     $string=str_replace('8217','', $string); 
+     $string=str_replace('8212','', $string); 
+      $string=str_replace('160','', $string); 
+      $string=str_replace('038',' ', $string); 
+      
+     $string=str_replace('ldquo','', $string); 
+       $string=str_replace('rdquo','', $string); 
+        $string=str_replace('ndash','', $string); 
+       
+    return $string; // Removes special chars.
+	}
 ?>
 
 <?php
@@ -96,6 +114,11 @@ if($result = mysqli_query($conn,$sql))
 						$price = mysqli_real_escape_string($conn,$value->find(".dualRoomPriceDetail",0)->plaintext);
 						$details = mysqli_real_escape_string($conn,$value->find(".roomDetails",0)->plaintext);
 						$room_title = mysqli_real_escape_string($conn,$value->find("h3",0)->plaintext);
+
+						$max_adult = clean($max_adult);
+						$price = clean($price);
+						$details = clean($details);
+						$room_title = clean($room_title);
 
 						//if at least one of rooms is available set flag false
 						if(preg_match('/[0-9]+/', $price))
