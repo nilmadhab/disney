@@ -20,43 +20,48 @@
 <style type="text/css">
     
     body{
-        background-image: url("background.png");
+        background-image: url("background_1.png");
     }
-    #back{
-        background-image: url("background.png");
+    /*#back{
+        background-image: url("background_1.png");
+    }*/
+    #footer{
+        margin-bottom: 0px; 
     }
-    body {// padding-top: 70px; }
 </style>
 </head>
+
 <body   style="overflow-x: hidden;">
+
 <div class="row">
         <nav class="navbar" style="background-color:#2c3d51;">
 
             <div class="row" style="width:50%;margin:0 auto;">
                   <div class="container-fluid">
-                <div class="navbar-header">
+                <!-- <div class="navbar-header"> -->
                   <a class="navbar-brand" href="#"><img src="logo.png" style="  width: 179px;margin-top: -20px;" / ></a>
-                </div>
-                <div>
-                  <ul class="nav navbar-nav" class="pull-right" style="margin-left:300px">
+                   <!-- <ul class="nav navbar-nav" class="pull-right" style="margin-left:300px"> -->
                     
-                    <li class="pull-right"><a href="#">Page 3</a></li>
-                  </ul>
+                    <li class="pull-right"><a href="#"><img src="menu.png" alt="Menu" ></a></li>
+                  <!-- </ul> -->
+                <!-- </div> -->
+                <div>
+                 
                 </div>
               </div>
             </div>
 
 </nav>
-  
+</div>
 
-    </div>
+<div class="row">
 <div class="container" style="z-index:999">
     
     <div class="row" style="width:40%; margin:0 auto; margin-top:0%">
 
         <div class="row" style="text-align:center; color:white">
-        <h2> The Quickest Way to Price</h2>
-        <h4>Your Walt Disney World Vacation ! </h4>
+        <h2> <font face="Arial Black">The Quickest Way to Price</font></h2>
+        <h4><font face="Lucida Console">Your Walt Disney World Vacation !</font> </h4>
         </div>
 
         <form action="test_child_action.php" method="get" style="background-color:#d6d7d9;
@@ -405,15 +410,18 @@
             <label class="optional" for="accessible_5573d56a1cb90">
             <span class="labelValue">Accessible Rooms</span></label>
             </div>
-        
+        <div style="text-align: center;
+}" >
           <input type="submit" class="btn" 
-          style="background-color:#2c3d51;color:#FFF; width:200px; margin-left:30%;" value="Find Prices " />
+          style="background-color:#2c3d51;color:#FFF; width:200px;  value="Find Prices " />
+        </div>
         </form>
     </div>
-
+</div>
 </div>
 
-<div class="navbar  navbar-fixed-bottom" role="navigation" style="background-color:#2c3d51;text-align:center;color:white; padding-top:1%;height: 96px;" >
+<div id="footer">
+<div  role="navigation" style="background-color:#2c3d51;text-align:center;color:white; padding-top:1%;height: 96px;" >
     
     <p class="small">Disclamier: Price listed on this site should be considered approximate and used for planning purpose only. 
     <br>Pricing and availibility data is retrived and refrshed in every 30 minutes</p>
@@ -422,8 +430,7 @@
 
 
     <p style="  margin-top: -16px;">Copyright @2015 Discalc. All rights Reserved </p>
-
-
+</div>
 </div>
 
 </body>
