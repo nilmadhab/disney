@@ -17,11 +17,14 @@
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 
+<link href="./date_dependencies/bootstrap.min.css" rel="stylesheet" media="screen">
+<link href="./date_dependencies/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
+
 <style type="text/css">
     
     body{
         background-image: url("background_1.png");
-        padding-bottom: 70px; 
+        //padding-bottom: 70px; 
     }
     /*#back{
         background-image: url("background_1.png");
@@ -56,6 +59,8 @@
     }
 }
 </style>
+
+
 </head>
 
 <body   style="overflow-x: hidden;">
@@ -104,14 +109,36 @@
                 <div class="row">
                     <div class="col-sm-6">
                     <label for="exampleInputEmail1">Check In </label>
-                    <input name="checkIn" id="checkin" min="<?php echo date("Y-m-d"); ?>" value="<?php echo date("Y-m-d"); ?>" type="date" required>
+                    <input name="checkIn" id="checkin" min="<?php echo date("Y-m-d"); ?>" value="<?php echo date("Y-m-d"); ?>" type="date" required> 
+<!-- ashish -->
+<!-- <div class="form-group">
+                
+                <div class="input-group date form_date " data-date="" data-date-format="yyyy-mm-dd" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                    <input class="form-control" size="16" type="text" name="checkIn" id="checkin" min="<?php echo date("Y-m-d"); ?>" value="<?php echo date("Y-m-d"); ?>"  readonly>
+                    
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                </div>
+                
+            </div> -->
+<!-- ashish -->
+
 
                     </div>
                     <div class="col-sm-6">
                     <label for="exampleInputEmail1">Check Out</label>
-                    <input name="checkOut" id="checkout" min="<?php echo date("Y-m-d",strtotime("+1 day")); ?>" 
-                            value="<?php echo date("Y-m-d",strtotime("+7 day")); ?>" 
-                            max="<?php echo date("Y-m-d",strtotime("+10 day")); ?>" type="date" required>
+                    <input name="checkOut" id="checkout" min="<?php echo date("Y-m-d",strtotime("+1 day")); ?>" value="<?php echo date("Y-m-d",strtotime("+7 day")); ?>" max="<?php echo date("Y-m-d",strtotime("+10 day")); ?>" type="date" required>
+<!-- ashish -->
+<!-- <div class="form-group">
+                
+                <div class="input-group date form_date " data-date="" data-date-format="yyyy-mm-dd" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                    <input class="form-control" size="16" type="text" name="checkOut" id="checkout" min="<?php echo date("Y-m-d",strtotime("+1 day")); ?>" value="<?php echo date("Y-m-d",strtotime("+7 day")); ?>" max="<?php echo date("Y-m-d",strtotime("+10 day")); ?>" readonly>
+                    
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                </div>
+                
+            </div> -->
+<!-- ashish -->
+                    </span>
                     </div>
                     <script type="text/javascript">
                     $(document).ready(function(){
@@ -476,6 +503,25 @@
         
 
     </script>
+
+<script type="text/javascript" src="./date_dependencies/jquery-1.8.3.min.js" charset="UTF-8"></script>
+<script type="text/javascript" src="./date_dependencies/bootstrap.min.js"></script>
+<script type="text/javascript" src="./date_dependencies/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+<script type="text/javascript" src="./date_dependencies/bootstrap-datetimepicker.uk.js" charset="UTF-8"></script>
+<script type="text/javascript">
+   
+    $('.form_date').datetimepicker({
+        language:  'en',
+        weekStart: 1,
+        todayBtn:  1,
+        autoclose: 1,
+        todayHighlight: 1,
+        startView: 2,
+        minView: 2,
+        forceParse: 0
+    });
+</script>
+    
 </div>
 </body>
 </html>
