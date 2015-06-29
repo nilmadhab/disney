@@ -50,6 +50,9 @@
         width:80%;
         padding-bottom: 2%;
     }
+    #header{
+        width: 80%
+    }
 
 
 }
@@ -58,6 +61,9 @@
     #form_contain{
         width:40%;
 
+    }
+    #header{
+        width:50%;
     }
 }
 </style>
@@ -71,7 +77,8 @@
     <div class="row">
         <nav class="navbar" style="background-color:#2c3d51;">
 
-            <div class="row" style="width:50%;margin:0 auto;">
+            <div class="row" id="header" style="margin:0 auto;">
+
                   <div class="container-fluid">
                 <!-- <div class="navbar-header"> -->
                   <a class="navbar-brand" href="#"><img src="logo.png"  class="img-responsive"  style="  width: 179px;margin-top: -20px;" / ></a>
