@@ -48,6 +48,10 @@
     }
     #form_contain{
         width:80%;
+        padding-bottom: 2%;
+    }
+    #header{
+        width: 80%
     }
 
 
@@ -56,6 +60,10 @@
 @media (min-width: 768px) {
     #form_contain{
         width:40%;
+
+    }
+    #header{
+        width:50%;
     }
 }
 </style>
@@ -69,18 +77,17 @@
     <div class="row">
         <nav class="navbar" style="background-color:#2c3d51;">
 
-            <div class="row" style="width:50%;margin:0 auto;">
+            <div class="row" id="header" style="margin:0 auto;">
+
                   <div class="container-fluid">
                 <!-- <div class="navbar-header"> -->
-                  <a class="navbar-brand" href="#"><img src="logo.png" style="  width: 179px;margin-top: -20px;" / ></a>
+                  <a class="navbar-brand" href="#"><img src="logo.png"  class="img-responsive"  style="  width: 179px;margin-top: -20px;" / ></a>
                    <!-- <ul class="nav navbar-nav" class="pull-right" style="margin-left:300px"> -->
                     
-                    <li class="pull-right"><a href="#"><img src="menu.png" alt="Menu" ></a></li>
+                    <li class="pull-right"><a href="#"><img src="menu.png" style="margin-top: -20px;" class="img-responsive"  alt="Menu" ></a></li>
                   <!-- </ul> -->
                 <!-- </div> -->
-                <div>
-                 
-                </div>
+               
               </div>
             </div>
 
@@ -94,7 +101,7 @@
     <div class="row">
         <div class="container" style="z-index:999">
 
-        <div class="row" id="form_contain" style="margin:0 auto; margin-top:0%">
+        <div class="row" id="form_contain" style="margin:0 auto; margin-top:-2%" >
 
             <div class="row" style="text-align:center; color:white">
             <h2> <font face="Arial Black">The Quickest Way to Price</font></h2>
@@ -109,7 +116,7 @@
                 <div class="row">
                     <div class="col-sm-6">
                     <label for="exampleInputEmail1">Check In </label>
-                    <input name="checkIn" id="checkin" min="<?php echo date("Y-m-d"); ?>" value="<?php echo date("Y-m-d"); ?>" type="date" required> 
+                    <input name="checkIn" class="form-control" id="checkin" min="<?php echo date("Y-m-d"); ?>" value="<?php echo date("Y-m-d"); ?>" type="date" required> 
 <!-- ashish -->
 <!-- <div class="form-group">
                 
@@ -126,7 +133,7 @@
                     </div>
                     <div class="col-sm-6">
                     <label for="exampleInputEmail1">Check Out</label>
-                    <input name="checkOut" id="checkout" min="<?php echo date("Y-m-d",strtotime("+1 day")); ?>" value="<?php echo date("Y-m-d",strtotime("+7 day")); ?>" max="<?php echo date("Y-m-d",strtotime("+10 day")); ?>" type="date" required>
+                    <input name="checkOut" class="form-control" id="checkout" min="<?php echo date("Y-m-d",strtotime("+1 day")); ?>" value="<?php echo date("Y-m-d",strtotime("+7 day")); ?>" max="<?php echo date("Y-m-d",strtotime("+10 day")); ?>" type="date" required>
 <!-- ashish -->
 <!-- <div class="form-group">
                 
