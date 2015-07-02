@@ -89,7 +89,7 @@ if($result = mysqli_query($conn,$sql)){
                 <td> {$room_title}</td>
                 <td> {$details} </td>
                 <td> {$price}</td>
-                <td> <button type='button' class='btn btn-primary btn-lg' data-toggle='modal' data-target='#myModal'> Select this
+                <td> <button type='button' class='btn btn-success btn-lg' data-toggle='modal' data-target='#myModal'> Calculate
 </button> </td>
                 ";
 
@@ -161,6 +161,13 @@ $(document).ready(function(){
         var number = parseInt(price.match(/\d+/)[0], 10);
         var tr = '<tr>';
         tr += '<td>'+<?php echo $Adults ?>+'</td><td>'+<?php echo $Childrens ?>+ '</td><td> '+<?php echo $diff1 ?>+'</td><td>$ '+number +'</td><td>$'+ number*no_day + '</td>';
+        var final_price = number*no_day;
+
+        var tax = final_price*0.13;
+        final_price += tax;
+
+        tr += '<tr><td></td><td></td><td></td><td>+ 13 % tax </td><td>$ '+ tax.toFixed(2);+ '</td></tr>';
+         tr += '<tr><td></td><td></td><td></td><td>Total </td><td>$ '+ final_price+ '</td></tr>'
 
 
 
