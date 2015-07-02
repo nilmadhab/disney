@@ -108,12 +108,26 @@ if($result = mysqli_query($conn,$sql)){
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h4 class="modal-title" id="myModalLabel">Modal title</h4>
       </div>
-      <div class="modal-body" id="mymodalbody">
-        ...
+      <div class="modal-body" >
+        <div id="info">
+        </div>
+        <table class="table table-striped">
+            <thead>
+                <th> No. Of Adult </th>
+                <th> No. Of Child </th>
+                <th> No. Of Days </th>
+                <th> Price per day</th>
+                <th> Total price</th>
+            </thead>
+            <tbody id="mymodalbody">
+
+                
+            </tbody>
+        </table>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+       
       </div>
     </div>
   </div>
@@ -130,6 +144,7 @@ $(document).ready(function(){
         console.log(from);
         var resort = $(this).closest('tr').first().children().html().replace('-',' ');
         var room = $(this).closest('tr').first().children().next().html();
+        var price = $(this).closest('tr').first().children().next().next().next().html();
         //console.log(head);
         $('#myModalLabel').html('DisneyWorld Resort Booking');
 
@@ -139,9 +154,18 @@ $(document).ready(function(){
         html += '<td>'+<?php echo $Adults ?>+' Adults and '+<?php echo $Childrens ?>+ ' childrens &times; '+<?php echo $diff1 ?>+'</td>';
         html += '<td class:"text-right">'+'price'+'</td></tr>' ;
         html += '</table>';
+        var no_day = "<?php echo $diff1; ?>";
+
+        $('#info').html(html);
+        //price = parseInt(price, 10);
+        var number = parseInt(price.match(/\d+/)[0], 10);
+        var tr = '<tr>';
+        tr += '<td>'+<?php echo $Adults ?>+'</td><td>'+<?php echo $Childrens ?>+ '</td><td> '+<?php echo $diff1 ?>+'</td><td>$ '+number +'</td><td>$'+ number*no_day + '</td>';
 
 
-        $('#mymodalbody').html(html);
+
+        tr += '</tr>';
+        $('#mymodalbody').html(tr);
 
 
         
