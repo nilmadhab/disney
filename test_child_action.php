@@ -2,14 +2,11 @@
 <html>
 <head>
     <title>DisneyWorld</title>
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
-
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </head>
 
 <?php
@@ -68,9 +65,10 @@ if($result = mysqli_query($conn,$sql)){
         echo "<table class='table table-striped'>
             <tr>
             <td> Resort Name </td>
-            <td> Price </td>
             <td> Room title </td>
             <td> Details </td>
+            <td> Price </td>
+            <td> Final Price </td>
             </tr>" ;
 
         while($row = mysqli_fetch_array($result)){
@@ -88,10 +86,11 @@ if($result = mysqli_query($conn,$sql)){
 
                 echo "
                 <td> {$resort_name} </td>
-                <td> {$price}</td>
                 <td> {$room_title}</td>
-
                 <td> {$details} </td>
+                <td> {$price}</td>
+                <td> <button type='button' class='btn btn-primary btn-lg' data-toggle='modal' data-target='#myModal'> Select this
+</button> </td>
                 ";
 
                 echo "</tr>";
@@ -101,4 +100,53 @@ if($result = mysqli_query($conn,$sql)){
 ?>
 
 </table>
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body" id="mymodalbody">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+
+$(document).ready(function(){
+    $('table').on('click','.btn-lg',function(event,ui) {
+     
+ 
+        var from = $(this).closest('tr').index();
+     
+        console.log(from);
+        var resort = $(this).closest('tr').first().children().html().replace('-',' ');
+        var room = $(this).closest('tr').first().children().next().html();
+        //console.log(head);
+        $('#myModalLabel').html('DisneyWorld Resort Booking');
+
+        var html = 'You are here for <strong>'+room+ '</strong> from <strong>'+resort+'</strong>';
+        html += '<p>Price Summary</p>';
+        html += '<table><tr>';
+        html += '<td>'+<?php echo $Adults ?>+' Adults and '+<?php echo $Childrens ?>+ ' childrens &times; '+<?php echo $diff1 ?>+'</td>';
+        html += '<td class:"text-right">'+'price'+'</td></tr>' ;
+        html += '</table>';
+
+
+        $('#mymodalbody').html(html);
+
+
+        
+  });
+});
+  
+</script>
 </html>
