@@ -148,7 +148,7 @@ $(document).ready(function(){
         var room = $(this).closest('tr').first().children().next().html();
         var price = $(this).closest('tr').first().children().next().next().next().html();
         //console.log(head);
-        $('#myModalLabel').html('DisneyWorld Resort Booking');
+        $('#myModalLabel').html(resort);
 
         var html = 'You are here for <strong>'+room+ '</strong> from <strong>'+resort+'</strong>';
         html += '<p>Price Summary</p>';
@@ -158,7 +158,7 @@ $(document).ready(function(){
         html += '</table>';
         var no_day = "<?php echo $diff1; ?>";
 
-        $('#info').html(html);
+       // $('#info').html(html);
         //price = parseInt(price, 10);
         var number = parseInt(price.match(/\d+/)[0], 10);
         var tr = '<tr>';
