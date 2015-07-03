@@ -37,7 +37,8 @@ $createmain = "CREATE TABLE IF NOT EXISTS $maintable (
   `max_adult` varchar(200) NOT NULL,
   `price` varchar(1100) NOT NULL,
   `details` text NOT NULL,
-  `room_title` varchar(200) NOT NULL
+  `room_title` varchar(200) NOT NULL,
+  `last_updated` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;" ;
 $alter1main = "ALTER TABLE $maintable
  		ADD PRIMARY KEY (`id`);";
@@ -56,7 +57,8 @@ $create = "CREATE TABLE IF NOT EXISTS $crontable (
   `max_adult` varchar(200) NOT NULL,
   `price` varchar(1100) NOT NULL,
   `details` text NOT NULL,
-  `room_title` varchar(200) NOT NULL
+  `room_title` varchar(200) NOT NULL,
+  `last_updated` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;";
 $alter1 = "ALTER TABLE $crontable
  		ADD PRIMARY KEY (`id`);";

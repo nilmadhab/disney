@@ -14,6 +14,13 @@ using namespace std;
 #define vectin(a,n)
 typedef unsigned long long int ull;
 
+string IntToString (int a)
+{
+    ostringstream temp;
+    temp<<a;
+    return temp.str();
+}
+
 int main()
 {
 	int days,start_h,start_m;
@@ -25,18 +32,30 @@ int main()
 
 	int h = start_h ;
 	int m = start_m + 1 ;
+	
+	//cout << hourstring << endl ;
+
 	fr(i,0,days)
 	{
+		string hourstring = "" ;
 		fr(j,0,8)
-			cout << m << " " <<  h << " * * * php /var/www/html/harvest_" << j+1 << ".php " << i << " " << i+1 << " >> /var/www/html/log_cron.php 2>&1 " << endl ;
-		m += 20 ;
+		{
+			int hr = h+3*j ; 
+			if(hr >= 24)
+				hr = h%24 ;
+			hourstring = hourstring +  IntToString(hr) ;
+			if(j != 7)
+				hourstring += ","; 
+		}
+
+		fr(j,0,8)
+			cout << m << " " <<  hourstring << " * * * php /var/www/html/harvest_" << j+1 << ".php " << i << " " << i+1 << " >> /var/www/html/log_cron.php 2>&1 " << endl ;
+		m += 22 ;
 		if(m  >= 60 )
 		{
 			m = m%60 ;
 			h++ ;
 		}
-		if(h >= 24)
-			h = h%24 ;
 		cout << endl ;
 	}
 	return 0;
