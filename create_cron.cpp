@@ -27,11 +27,26 @@ int main()
 	cin >> days ;
 	cin >> start_m >> start_h ;
 
-	//cout << start_m-1 << " " <<  start_h << "," << (start_h + 12)%24 << " * * * rm log_cron.php" << endl;
-	cout << start_m << " " <<  start_h << " * * * php /var/www/html/harvest_pre.php >> /var/www/html/log_cron.php 2>&1" << endl << endl;
 
 	int h = start_h ;
-	int m = start_m + 1 ;
+	int m = start_m ;
+
+	string hourstring = "" ;
+		fr(j,0,8)
+		{
+			int hr = h+3*j ; 
+			if(hr >= 24)
+				hr = hr%24 ;
+			hourstring = hourstring +  IntToString(hr) ;
+			if(j != 7)
+				hourstring += ","; 
+		}
+
+	//cout << start_m-1 << " " <<  start_h << "," << (start_h + 12)%24 << " * * * rm log_cron.php" << endl;
+	cout << start_m << " " <<  hourstring << " * * * php /var/www/html/harvest_pre.php >> /var/www/html/log_cron.php 2>&1" << endl << endl;
+
+	h = start_h ;
+	m = start_m + 1 ;
 	
 	//cout << hourstring << endl ;
 
@@ -42,7 +57,7 @@ int main()
 		{
 			int hr = h+3*j ; 
 			if(hr >= 24)
-				hr = h%24 ;
+				hr = hr%24 ;
 			hourstring = hourstring +  IntToString(hr) ;
 			if(j != 7)
 				hourstring += ","; 
