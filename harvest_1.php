@@ -48,8 +48,9 @@ $crontable = '`cron_day_harvest`';
 
 //fetching data
 $sql = "SELECT * FROM `resort_value`";
-$processAdults = 10 ;  //set n+1 for n adults.
-$processChilds = 7 ;  //set n for n childs
+$processAdults = 3 ;  //set n+1 for n adults.
+$processChilds = 1 ;  //set n for n childs
+$accessibleyes = 1 ; 
 
 if($result = mysqli_query($conn,$sql))
 {
@@ -60,7 +61,7 @@ if($result = mysqli_query($conn,$sql))
 		if($resortcount > 4 )
 			break;
 		//accessible iterations
-		for($a = 0 ; $a < 2 ; $a++ )
+		for($a = 0 ; $a < $accessibleyes ; $a++ )
 		{
 			//Adult iterations
 			for($am = 1 ; $am < $processAdults ; $am++ )  
