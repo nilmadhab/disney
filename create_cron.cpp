@@ -42,8 +42,19 @@ int main()
 				hourstring += ","; 
 		}
 
+	string minute_string = "" ;
+	fr(j,0,4)
+	{
+		int mr = m+15*j ; 
+		if(mr >= 60)
+			mr = mr%60 ;
+		minute_string = minute_string +  IntToString(mr) ;
+		if(j != 3)
+			minute_string += ","; 
+	}
+
 	//cout << start_m-1 << " " <<  start_h << "," << (start_h + 12)%24 << " * * * rm log_cron.php" << endl;
-	cout << start_m << " " <<  hourstring << " * * * php /var/www/html/harvest_pre.php >> /var/www/html/log_cron.php 2>&1" << endl << endl;
+	cout << minute_string <<  " *" << " * * * php /var/www/html/harvest_pre.php >> /var/www/html/log_cron.php 2>&1" << endl << endl;
 
 	h = start_h ;
 	m = start_m + 1 ;
@@ -63,9 +74,21 @@ int main()
 				hourstring += ","; 
 		}
 
+		string minute_string = "" ;
+		fr(j,0,4)
+		{
+			int mr = m+15*j ; 
+			if(mr >= 60)
+				mr = mr%60 ;
+			minute_string = minute_string +  IntToString(mr) ;
+			if(j != 3)
+				minute_string += ","; 
+		}
+
+
 		fr(j,0,8)
-			cout << m << " " <<  hourstring << " * * * php /var/www/html/harvest_" << j+1 << ".php " << i << " " << i+1 << " >> /var/www/html/log_cron.php 2>&1 " << endl ;
-		m += 22 ;
+			cout <<  minute_string <<  " *" << " * * * php /var/www/html/harvest_" << j+1 << ".php " << i << " " << i+1 << " >> /var/www/html/log_cron.php 2>&1 " << endl ;
+		m += 1 ;
 		if(m  >= 60 )
 		{
 			m = m%60 ;

@@ -48,7 +48,7 @@ if(isset($_GET)){
     else
     {
         //all resorts
-        $sql = "SELECT *,count(*) as cont FROM `day_harvest` WHERE `startdate` >= '$checkin' and `enddate` <= '$checkout' and `noAdults` = '$numberOfAdults' and `noChilds` = '$numberOfChildren' and `accessibility` = '$accessible' group by resort_id " ;
+        $sql = "SELECT *,count(*) as cont FROM `day_harvest` WHERE `startdate` >= '$checkin' and `enddate` <= '$checkout' and `noAdults` = '$numberOfAdults' and `noChilds` = '$numberOfChildren' and `accessibility` = '$accessible' group by resort_id,room_title HAVING cont = '$diff1'"  ;
     }
     //select *,count(*) as cont from (SELECT * FROM `day_harvest` WHERE `startdate` >= '2015-07-01' and `enddate` <= '2015-07-03' and `noAdults` = '1' and `noChilds` = '0' and `accessibility` = '0' group by resort_id ) as t group by t.resort_id having cont=2
     echo "Query: ".$sql."  ||  ";
