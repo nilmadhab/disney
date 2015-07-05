@@ -70,6 +70,7 @@ if($result = mysqli_query($conn,$sql)){
             <td> Room title </td>
             <td> Details </td>
             <td> Price </td>
+            <td> Last updated </td>
             <td> Final Price </td>
             </tr>" ;
 
@@ -83,6 +84,7 @@ if($result = mysqli_query($conn,$sql)){
                 $details = $row['details'];
 
                 $room_title = $row['room_title'];
+                $last_updated = $row['last_updated'];
 
                 //echo $resort_name."-- > ".$price." --- > ".$details." -- > ".$room_title."<br />";
 
@@ -91,6 +93,7 @@ if($result = mysqli_query($conn,$sql)){
                 <td> {$room_title}</td>
                 <td> {$details} </td>
                 <td> {$price}</td>
+                <td> {$last_updated}</td>
                 <td> <button type='button' class='btn btn-success btn-lg' data-toggle='modal' data-target='#myModal'> Calculate
 </button> </td>
                 ";
